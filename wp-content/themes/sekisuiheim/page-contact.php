@@ -20,7 +20,7 @@
 				<h2 class="c_ttl">下記のお問い合わせフォームよりお気軽にご相談ください。</h2>
 				<p class="c-contact-form__main--txt">当ページでのお問い合わせについては、後日担当者からご返信させていただいております。</p>
 				<p class="c-contact-form__main--quote"><span class="__sub">※</span>は必須項目です。</p>
-				<a class="contact_btn" href="http://localhost/sekisuiheim/contact/">セキスイハイム・<br class="u-sm-max">ツーユーホームに<br>お住まいのお客様はコチラ</a>
+				<a class="contact_btn opacity" href="https://www.sekisuiheim.com/contact2/inquire/member/form.html?md=4" target="_blank">セキスイハイム・<br class="u-sm-max">ツーユーホームに<br>お住まいのお客様はコチラ</a>
 			</section>
 
 			<div class="c-contact-form__flow">
