@@ -1,0 +1,192 @@
+@charset "utf-8";
+@use "../../global/_" as g;
+.l-header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 10;
+	width: 100%;
+	background: g.$white;
+
+	&__inner {
+		display: flex;
+		align-items: center;
+		height: 128px;
+		margin: 0 auto;
+		padding: 0 20px;
+
+		@include g.smMin {
+			justify-content: space-between;
+		}
+
+		@include g.smMax {
+			height: 64px;
+			padding: 0 0 0 15px;
+		}
+
+	}
+	&-logo {
+		flex: 0 0 330px;
+		line-height: 0;
+		position: relative;
+		z-index: 5;
+
+		@include g.mdMax {
+			flex: 0 0 220px;
+		}
+
+		@include g.smMax {
+			flex: 0 0 145px;
+		}
+
+		@include g.xsMax {
+			flex: 0 0 125px;
+		}
+
+		&__link {
+			display: block;
+
+			.__elem {
+				width: 100%;
+			}
+
+		}
+
+	}
+
+	&-sp {
+		margin-left: auto;
+		display: none;
+
+		@include g.smMax {
+			display: block;
+		}
+
+		&__toggle {
+			width: 64px;
+			height: 64px;
+			cursor: pointer;
+			position: fixed;
+			top: 0;
+			right: 0;
+			z-index: 5;
+
+			.__sub {
+				width: 32px;
+				height: 2px;
+				margin: auto;
+				background: g.$mainColor02;
+				position: absolute;
+				right: 0;
+				left: 0;
+				transition: all 0.3s;
+
+				&:first-of-type {
+					top: 23px;
+				}
+
+				&:nth-of-type(2) {
+					top: 31px;
+				}
+
+				&:last-of-type {
+					top: 39px;
+				}
+
+			}
+
+		}
+
+		&__menu {
+			width: 100%;
+			height: 100%;
+			padding: 100px 0 50px;
+			background: g.$white;
+			position: fixed;
+			top: 0;
+			left: 0;
+			z-index: -1;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			gap: 30px;
+			overflow-x: scroll;
+			opacity: 0;
+			visibility: hidden;
+			transition: all 0.3s;
+
+			&--link {
+				@include g.font-mincho;
+				font-size: 2rem;
+				line-height: 1;
+				color: g.$mainColor02;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				gap: 15px;
+
+				&::after {
+					content: "";
+					width: 32px;
+					height: 32px;
+					border-radius: 30px;
+					background: g.$mainColor02 url(../img/common/ico_arrow-white.svg) no-repeat center / 12px;
+				}
+
+			}
+
+			.contact_btn {
+				width: 90%;
+				margin: 0 auto;
+			}
+
+			.freecall_btn {
+				width: 90%;
+				margin: 0 auto;
+			}
+
+			.l-header-sp__submenu {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+				gap: 20px;
+			}
+
+		}
+
+		&.nav_open {
+
+			.l-header-sp__toggle {
+
+				.__sub {
+
+					&:first-of-type {
+						top: 30px;
+						transform: rotate(-45deg);
+					}
+
+					&:nth-of-type(2) {
+						opacity: 0;
+					}
+
+					&:last-of-type {
+						top: 30px;
+						transform: rotate(45deg);
+					}
+
+				}
+
+			}
+
+			.l-header-sp__menu {
+				opacity: 1;
+				visibility: visible;
+				z-index: 4;
+			}
+
+		}
+
+	}
+
+}

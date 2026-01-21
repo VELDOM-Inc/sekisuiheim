@@ -1,0 +1,94 @@
+@charset "utf-8";
+@use "../../global/_" as g;
+.e-btn-arrow {
+	position: relative;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 100%;
+	min-width: 150px;
+	height: 50px;
+	margin: 10px 5px;
+	padding: 0 30px;
+	background: g.$baseColor;
+	border: 1px solid transparent;
+	color: g.$white;
+	text-align: center;
+	text-decoration: none;
+	line-height: 1.4;
+	@include g.transition;
+	@include g.radius(3);
+
+	@include g.smMax {
+		height: 40px;
+		margin: 5px;
+	}
+	.__ico {
+		@include g.centering-elements(false, true);
+		
+		&:first-child {
+			left: 15px;
+
+			@include g.smMax {
+				left: 10px;
+			}
+		}
+		&:last-child {
+			right: 15px;
+
+			@include g.smMax {
+				right: 10px;
+			}
+		}
+	}
+	&:not(._disabled_) {
+		cursor: pointer;
+
+		@include g.hover {
+			background: g.$white;
+			border-color: g.$baseColor;
+			color: g.$baseColor;
+		}
+	}
+	&._disabled_ {
+		opacity: .5;
+	}
+	
+	//サイズオプション Lサイズ-------------------------------
+	&._w-l_ {
+		min-width: 300px;
+		height: 60px;
+		font-size: g.$fz-m;
+
+		@include g.smMax {
+			width: 100%;
+			min-width: 0;
+			height: 50px;
+		}
+	}
+	//サイズオプション Sサイズ-------------------------------
+	&._w-s_ {
+		min-width: inherit;
+		height: 40px;
+
+		@include g.smMax {
+			min-width: 0;
+			min-height: 35px;
+			padding: 0 20px;
+			font-size: g.$fz-xxs;
+		}
+	}
+	//カラーオプション アウトライン-------------------------------
+	&._outline_ {
+		background: g.$white;
+		border-color: g.$baseColor;
+		color: g.$baseColor;
+
+		&:not(._disabled_) {
+			@include g.hover {
+				background: g.$baseColor;
+				color: g.$white;
+			}
+		}
+	}
+}

@@ -1,0 +1,201 @@
+@charset "utf-8";
+@use "../vars/_" as v;
+
+// ============================================================
+//  vw 
+// ============================================================
+@function sm_vw($size, $viewport:$smDesignW){
+  $rate: math.div(100 , $viewport);
+  @return $rate * $size * 1vw;
+}
+@function md_vw($size, $viewport:$mdDesignW){
+  $rate: math.div(100 , $viewport);
+  @return $rate * $size * 1vw;
+}
+@function lg_vw($size, $viewport:$lgDesignW){
+  $rate: math.div(100 , $viewport);
+  @return $rate * $size * 1vw;
+}
+
+@function sm_vh($size, $viewport:$smDesignW){
+  $rate: math.div(100 , $viewport);
+  @return $rate * $size * 1vh;
+}
+@function md_vh($size, $viewport:$mdDesignW){
+  $rate: math.div(100 , $viewport);
+  @return $rate * $size * 1vh;
+}
+@function lg_vh($size){
+  $rate: math.div(100 , 760);
+  @return $rate * $size * 1vh;
+}
+
+// ============================================================
+//  media query 
+// ============================================================
+@mixin xsMin {
+  @media print, screen and (v.$xsMin) {
+    @content;
+  }
+}
+@mixin smMin {
+  @media print, screen and (v.$smMin) {
+    @content;
+  }
+}
+@mixin mdMin {
+  @media print, screen and (v.$mdMin) {
+    @content;
+  }
+}
+@mixin lgMin {
+  @media print, screen and (v.$lgMin) {
+    @content;
+  }
+}
+@mixin smBtMd {
+  @media screen and (v.$smMin) and (v.$mdMax){
+    @content;
+  }
+}
+@mixin xsMax {
+  @media screen and (v.$xsMax) {
+    @content;
+  }
+}
+@mixin smMax {
+  @media screen and (v.$smMax) {
+    @content;
+  }
+}
+@mixin mdMax {
+  @media screen and (v.$mdMax) {
+    @content;
+  }
+}
+@mixin lgMax {
+  @media screen and (v.$lgMax) {
+    @content;
+  }
+}
+@mixin max-screen($breakpoint) {
+  @media screen and (max-width: $breakpoint) {
+    @content;
+  }
+}
+@mixin min-screen($breakpoint) {
+  @media print, screen and (min-width: $breakpoint) {
+    @content;
+  }
+}
+@mixin screen($breakpoint-min, $breakpoint-max) {
+  @media screen and (min-width: $breakpoint-min) and (max-width: $breakpoint-max) {
+    @content;
+  }
+}
+
+// ============================================================
+//  font 
+// ============================================================
+@mixin font-normal {
+	font-family: "Zen Kaku Gothic Antique", sans-serif;
+	font-weight: 400;
+}
+@mixin font-bold {
+	font-family: "Zen Kaku Gothic Antique", sans-serif;
+	font-weight: 600;
+}
+@mixin font-mincho {
+	font-family: "Zen Old Mincho", serif;
+	font-weight: 700;
+}
+@mixin font-en {
+	font-family: "Urbanist", sans-serif;
+	font-weight: 400;
+}
+@mixin font-icon {
+	font-family: 'icomoon';
+}
+
+// ============================================================
+//  grid 
+// ============================================================
+@mixin column($col){
+	width: calc(#{v.$max-width} / #{v.$maxcol} * #{$col} - #{v.$grid-margin});
+	margin-left: calc(#{v.$grid-margin} / 2);
+	margin-right: calc(#{v.$grid-margin} / 2);
+	margin-bottom: v.$grid-margin;
+
+	@include smMax {
+		width: calc(#{v.$max-width} / #{v.$maxcol} * #{$col} - #{v.$grid-margin-sm});
+		margin-left: calc(#{v.$grid-margin-sm} / 2);
+		margin-right: calc(#{v.$grid-margin-sm} / 2);
+		margin-bottom: v.$grid-margin-sm;
+	}
+}
+
+
+
+// ============================================================
+//  other 
+// ============================================================
+@mixin hidden {
+	font-size: 1px;
+	position: absolute;
+	top: -999999px;
+	left:-999999px;
+	clip: rect(1px, 1px, 1px, 1px);
+	width: 1px;
+	height: 1px;
+	display: block;
+	opacity: 0;
+}
+
+@mixin clearfix {
+	&::after {
+		content: '';
+		display: table;
+		clear: both;
+	}
+}
+
+@mixin radius($size) {
+	border-radius: ($size + px);
+}
+
+@mixin circle($size){
+	width: $size + px;
+	height: $size + px;
+	border-radius: 50%;
+}
+
+@mixin transition($duration: .4s) {
+	transition: $duration all;
+}
+
+@mixin opacity($opacity: 0.7) {
+	opacity: $opacity;
+}
+
+@mixin centering-elements($horizontal: true, $vertical: true) {
+	position: absolute;
+	@if $horizontal and $vertical {
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	} @else if $horizontal {
+		left: 50%;
+		transform: translate(-50%, 0);
+	} @else if $vertical {
+		top: 50%;
+		transform: translate(0, -50%);
+	}
+}
+
+@mixin hover {
+	@media (hover: hover) and (pointer: fine) {
+		&:hover {
+			@content;
+		}
+	 }
+}

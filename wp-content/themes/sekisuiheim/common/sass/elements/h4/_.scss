@@ -1,0 +1,28 @@
+@charset "utf-8";
+@use "../../global/_" as g;
+.e-h4 {
+	position: relative;
+	margin: 0 0 20px;
+	padding: 0 0 15px;
+	font-size: g.$fz-xxl;
+	line-height: 1.4;
+	@include g.font-bold;
+
+	@include g.smMax {
+		margin: 0 0 15px;
+		padding: 0 0 10px;
+		font-size: g.$fz-l;
+	}
+	&::after {
+		position: absolute;
+		left: 0;
+		bottom: -1px;
+		content: '';
+		width: 115px;
+		border-bottom: 1px solid g.$baseColor;
+
+		@include g.smMax {
+			width: 58px;
+		}
+	}
+}

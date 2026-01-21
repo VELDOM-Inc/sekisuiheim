@@ -1,0 +1,20 @@
+@charset "utf-8";
+@use "../../global/_" as g;
+.c-table-slide {
+	&__coution {
+		font-size: g.$fz-xxs;
+		
+		@include g.smMin {
+			display: none;
+		}
+	}
+	&__body {
+		margin: g.$m-xxxs 0;
+		overflow: auto;
+		overflow-scrolling: touch;
+		
+		table {
+			white-space: nowrap;
+		}
+	}
+}

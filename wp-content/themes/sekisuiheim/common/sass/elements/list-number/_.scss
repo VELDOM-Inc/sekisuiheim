@@ -1,0 +1,26 @@
+@charset "utf-8";
+@use "../../global/_" as g;
+.e-list-number {
+	counter-reset: number 0;
+	&__item {
+		position: relative;
+		padding-left: 1.2em;
+		
+		&:not(:first-child) {
+			margin-top: 5px;
+		}
+		&::before {
+			counter-increment: number;
+			content: counter(number)".";
+			color: g.$baseColor;
+			display: block;
+			position: absolute;
+			left: 0;
+		}
+	}
+	&._red_ &__item {
+		&::before {
+			color: g.$red;
+		}
+	}
+}

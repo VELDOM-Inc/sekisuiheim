@@ -1,0 +1,9 @@
+@charset "utf-8";
+@use "../../../global/_" as g;
+.e-form-textarea {
+	display: inline-block;
+	width: 100%;
+	padding: 10px;
+	background: g.$white;
+	color: g.$text-black;
+}

@@ -1,0 +1,45 @@
+@charset "utf-8";
+@use "../../global/_" as g;
+.c-float {
+	&::after {
+		display: block;
+		content: '';
+		clear: both;
+	}
+	&__item {
+		max-width: 50%;
+		margin-bottom: 20px;
+
+		@include g.smMax {
+			margin-bottom: 15px;
+		}
+		img {
+			max-width: 100%;
+		}
+	}
+	&._left_ &__item {
+		float: left;
+		margin-right: 20px;
+
+		@include g.smMax {
+			margin-right: 15px;
+		}
+	}
+	&._right_ &__item {
+		float: right;
+		margin-left: 20px;
+
+		@include g.smMax {
+			margin-left: 15px;
+		}
+	}
+	&._sm-col1_ &__item {
+		@include g.smMax {
+			float: none;
+			max-width: none;
+			width: 100%;
+			margin: 0 0 15px;
+			text-align: center;
+		}
+	}
+}

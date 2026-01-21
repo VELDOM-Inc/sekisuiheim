@@ -1,0 +1,41 @@
+@charset "utf-8";
+@use "../../global/_" as g;
+.m-pagination {
+	position: relative;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin: 30px 0 0;
+	line-height: 1.4;
+
+	&__item {
+		margin: 0 3px 5px;
+
+		@include g.smMax {
+			margin-bottom: 10px;
+		}
+	}
+	&__link {
+		display: block;
+		padding: 10px 15px;
+		background: g.$white;
+		border: 1px solid g.$baseColor;
+		color: g.$baseColor;
+		text-decoration: none;
+		@include g.radius(3);
+
+		@include g.smMax {
+			padding: 8px 12px;
+		}
+		&._current_ {
+			background: g.$baseColor;
+			color: g.$white;
+			opacity: 1;
+		}
+		@include g.hover {
+			background: g.$baseColor;
+			color: g.$white;
+			opacity: 1;
+		}
+	}
+}

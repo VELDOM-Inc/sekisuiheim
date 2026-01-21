@@ -1,0 +1,129 @@
+@charset "utf-8";
+@use "../../global/_" as g;
+
+.c-index-visual {
+	width: 100%;
+	margin-bottom: 120px;
+
+	@include g.smMax {
+		margin-bottom: 60px;
+	}
+
+	&__inner {
+		font-size: clamp(1.8rem, 0.949rem + 1.77vw, 2.5rem);
+		font-weight: 700;
+		width: 100%;
+    	height: 100%;
+    	display: flex;
+    	align-items: center;
+    	justify-content: center;
+	}
+
+	&__top {
+		position: relative;
+
+		@include g.smMax {
+			height: 375px;
+		}
+
+		&--catch {
+			width: min(750px,60%);
+			height: max-content;
+			margin: auto;
+			aspect-ratio: 377/192;
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			right: 0;
+			left: 0;
+
+			@include g.smMax {
+				width: min(340px,90%);
+			}
+
+		}
+
+		&--slider {
+
+			@include g.smMax {
+				height: 100%;
+			}
+
+			.slick-list ,.slick-track {
+
+				@include g.smMax {
+					height: 100%;
+				}
+
+			}
+
+		}
+
+		&--item {
+
+			@include g.smMax {
+				height: 100%;
+			}
+
+			.__img {
+
+				@include g.smMax {
+					object-fit: cover;
+					height: 100%;
+				}
+
+			}
+
+		}
+
+	}
+
+	&__bottom {
+
+		&--slider {
+
+			.c-index-visual__bottom--item {
+				width: 400px;
+
+				@include g.smMax {
+					width: 200px;
+				}
+
+			}
+
+		}
+
+	}
+
+}
+
+.c-mv {
+	padding: 120px 0;
+
+	@include g.smMax {
+		padding: 60px 0;
+	}
+
+	.c_ttl {
+		line-height: 1;
+		color: g.$subColor01;
+		width: min(1840px,90%);
+		padding-bottom: 60px;
+		margin: 0 auto;
+		border-bottom: 1px solid g.$subColor01;
+		justify-content: center;
+		gap: 30px;
+
+		@include g.smMax {
+			padding-bottom: 30px;
+			flex-direction: column;
+			gap: 20px;
+		}
+
+		&::before {
+			color: g.$subColor01;
+		}
+
+	}
+
+}

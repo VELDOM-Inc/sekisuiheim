@@ -1,0 +1,13 @@
+@charset "utf-8";
+@use "../../global/_" as g;
+@for $i from 0 through 100 {
+  .u-w#{$i}p {
+    width: #{percentage($i * 0.01)} !important;
+  }
+	@include g.smMax {
+		.u-sm-w#{$i}p {
+			width: #{percentage($i * 0.01)} !important;
+		}
+	}
+}
+

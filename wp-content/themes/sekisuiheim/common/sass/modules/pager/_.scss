@@ -1,0 +1,51 @@
+@charset "utf-8";
+@use "../../global/_" as g;
+.m-pager {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 1fr;
+	gap: 0 5px;
+	grid-template-areas: "prev list next";
+	margin: 30px 0 0;
+	line-height: 1.4;
+
+	&__item {
+		display: flex;
+		
+		&._prev_ {
+			grid-area: prev;
+			justify-content: flex-start;
+		}
+		&._next_ {
+			grid-area: next;
+			justify-content: flex-end;
+		}
+		&._list_ {
+			grid-area: list;
+			justify-content: center;
+		}
+	}
+	&__link {
+		display: block;
+		padding: 10px 15px;
+		background: g.$white;
+		border: 1px solid g.$baseColor;
+		color: g.$baseColor;
+		text-decoration: none;
+		@include g.radius(3);
+
+		@include g.smMax {
+			padding: 8px 12px;
+		}
+		&._current_ {
+			background: g.$baseColor;
+			color: g.$white;
+			opacity: 1;
+		}
+		@include g.hover {
+			background: g.$baseColor;
+			color: g.$white;
+			opacity: 1;
+		}
+	}
+}

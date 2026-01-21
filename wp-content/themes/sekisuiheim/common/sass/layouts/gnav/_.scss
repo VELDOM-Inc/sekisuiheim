@@ -1,0 +1,75 @@
+@charset "utf-8";
+@use "../../global/_" as g;
+
+.l-gnav {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	gap: 20px;
+	position: relative;
+	z-index: 5;
+
+	&__logo {
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+		gap: 8px;
+
+		@include g.smMax {
+			width: 135px;
+			margin: 0 0 0 15px;
+			display: block;
+		}
+
+		@include g.xsMax {
+			width: 125px;
+			margin: 0 0 0 10px;
+		}
+
+		.__sub {
+
+			&:first-of-type {
+				width: 144px;
+
+				@include g.mdMax {
+					width: 96px;
+				}
+
+				@include g.smMax {
+					display: none;
+				}
+
+			}
+
+			&:last-of-type {
+				width: 360px;
+
+				@include g.mdMax {
+					width: 240px;
+				}
+
+				@include g.smMax {
+					width: 100%;
+				}
+
+			}
+
+		}
+
+	}
+
+	&__inner {
+
+		@include g.smMax {
+			display: none;
+		}
+
+	}
+
+	&__list {
+		display: flex;
+		align-items: center;
+		gap: 30px;
+	}
+	
+}

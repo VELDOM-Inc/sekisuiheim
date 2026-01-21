@@ -1,0 +1,401 @@
+@charset "utf-8";
+@use "../../global/_" as g;
+
+.c-contact-form {
+	width: min(960px,100%);
+	margin: 0 auto;
+
+	.c_ttl {
+		line-height: 1.8;
+		color: g.$mainColor02;
+		margin-bottom: 40px;
+	}
+
+	&__main {
+
+		&--txt {
+			font-size: clamp(1.6rem, 1.357rem + 0.51vw, 1.8rem);
+			line-height: 1.8;
+			margin-bottom: 15px;
+		}
+
+		&--quote {
+			font-size: clamp(1.4rem, 1.278rem + 0.25vw, 1.5rem);
+			margin-bottom: 40px;
+
+			.__sub {
+				color: #C70010;
+			}
+
+		}
+
+		.contact_btn {
+			font-size: 3.2rem;
+			padding: 40px 80px;
+			margin-bottom: 80px;
+			justify-content: space-between;
+
+			@include g.smMax {
+				font-size: 2rem;
+				padding: 20px 20px 20px 30px;
+			}
+
+			@include g.xsMax {
+				font-size: 1.6rem;
+			}
+
+			&::after {
+				width: 48px;
+				height: 48px;
+			}
+
+		}
+
+	}
+
+	&__flow {
+		width: 400px;
+		margin: 0 auto 80px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		position: relative;
+
+		@include g.smMax {
+			width: min(310px,100%);
+		}
+
+		&--list {
+			font-size: 1.6rem;
+			font-weight: 500;
+			line-height: 1;
+			text-align: center;
+			width: 120px;
+			padding: 12px 0;
+			background: g.$white;
+			color: g.$mainColor02;
+			border: 1px solid g.$mainColor02;
+			border-radius: 50px;
+
+			@include g.smMax {
+				font-size: 1.5rem;
+				width: 80px;
+				padding: 11px 0;
+			}
+
+			&.__current {
+				background: g.$mainColor02;
+				color: g.$white;
+			}
+
+		}
+
+		&::after {
+			content: "";
+			width: 100%;
+			height: 2px;
+			margin: auto;
+			background: g.$mainColor02;
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			z-index: -1;
+		}
+
+	}
+
+	&__body {
+		margin-bottom: 180px;
+	}
+
+	&__block {
+		margin-bottom: 45px;
+
+		.c-contact-form__ttl {
+			font-size: clamp(1.7rem, 1.578rem + 0.25vw, 1.8rem);
+			color: g.$mainColor01;
+			margin-bottom: 20px;
+
+			.__red {
+				color: #C70010;
+			}
+
+		}
+
+		.c-contact-form__item {
+
+			&.__name {
+				width: 45%;
+
+				@include g.smMax {
+					width: 100%;
+				}
+
+			}
+
+			.c-contact-form__text {
+				width: 100%;
+				padding: 20px 15px;
+				background: #F4F4F4;
+				color: #333;
+				box-sizing: border-box;
+
+				&::placeholder {
+					color: #999;
+				}
+
+			}
+
+			.c-contact-form__number {
+				width: 30%;
+
+				@include g.smMax {
+					width: 100%;
+				}
+
+				.wpcf7-form-control-wrap {
+					padding-left: 25px;
+					display: flex;
+					align-items: center;
+					flex-wrap: wrap;
+					gap: 10px;
+					position: relative;
+
+					&::before {
+						content: "〒";
+						font-size: 1.6rem;
+						line-height: 1;
+						font-weight: 700;
+						position: absolute;
+						left: 0;
+						top: 25px;
+					}
+
+				}
+
+			}
+
+			.c-contact-form__tel {
+				width: 30%;
+
+				@include g.smMax {
+					width: 100%;
+				}
+
+			}
+
+			.c-contact-form__check {
+				display: flex;
+				align-items: center;
+				gap: 40px;
+
+				@include g.smMax {
+					flex-wrap: wrap;
+					gap: 20px;
+				}
+
+				.wpcf7-list-item {
+					margin: 0;
+
+					& > label {
+						margin: 0;
+						display: flex;
+						align-items: center;
+						gap: 4px;
+						cursor: pointer;
+					}
+
+					input[type=checkbox] {
+
+						&::before {
+							content: "";
+							width: 24px;
+							height: 24px;
+							background: url(../img/common/ico_check.svg) no-repeat center / 100%;
+							display: block;
+							transition: all 0.2s;
+
+							@include g.smMax {
+								width: 20px;
+								height: 20px;
+							}
+
+						}
+
+						&:checked {
+
+							&::before {
+								content: "";
+								background: url(../img/common/ico_check_after.svg) no-repeat center / 100%;
+							}
+
+						}
+
+					}
+					
+					.wpcf7-list-item-label {
+						font-size: clamp(1.4rem, 1.157rem + 0.51vw, 1.6rem);
+						font-weight: 700;
+						line-height: 1;
+						color: g.$mainColor02;
+					}
+
+				}
+
+			}
+
+			.c-contact-form__radio {
+				display: flex;
+				align-items: center;
+				gap: 40px;
+
+				@include g.smMax {
+					flex-wrap: wrap;
+					gap: 20px;
+				}
+
+				.wpcf7-list-item {
+					margin: 0;
+
+					& > label {
+						margin: 0;
+						display: flex;
+						align-items: center;
+						gap: 4px;
+						cursor: pointer;
+					}
+
+					input[type=radio] {
+
+						&::before {
+							content: "";
+							width: 24px;
+							height: 24px;
+							background: url(../img/common/ico_radio.svg) no-repeat center / 100%;
+							display: block;
+							transition: all 0.2s;
+
+							@include g.smMax {
+								width: 20px;
+								height: 20px;
+							}
+
+						}
+
+						&:checked {
+
+							&::before {
+								content: "";
+								background: url(../img/common/ico_radio_after.svg) no-repeat center / 100%;
+							}
+
+						}
+
+					}
+					
+					.wpcf7-list-item-label {
+						font-size: clamp(1.4rem, 1.157rem + 0.51vw, 1.6rem);
+						font-weight: 700;
+						line-height: 1;
+					}
+
+				}
+
+			}
+
+			.c-contact-form__quote {
+				font-size: clamp(1.4rem, 1.278rem + 0.25vw, 1.5rem);
+				line-height: 1.35;
+				margin: 15px 0 0;
+
+				& + .c-contact-form__address {
+					margin: 20px 0 0;
+				}
+
+			}
+
+			.c-contact-form__policy {
+				margin-bottom: 20px;
+
+				.__link {
+					text-decoration: underline;
+					color: g.$subColor01;
+					display: inline-flex;
+					align-items: center;
+					gap: 5px;
+
+					&::after {
+						content: "";
+						width: 16px;
+						aspect-ratio: 1;
+						background: url(../img/common/ico_blank.svg) no-repeat center / 100%;
+					}
+
+				}
+
+			}
+
+		}
+
+		.__mb {
+			margin-bottom: 20px;
+		}
+
+		&:last-of-type {
+			margin-bottom: 0;
+		}
+
+	}
+
+	.c-contact-form__btn {
+		width: min(400px,90%);
+		margin: 0 auto;
+		position: relative;
+
+		.c-contact-form__submit {
+			@include g.font-mincho;
+			font-size: 2rem;
+			font-weight: 700;
+			text-align: left;
+			color: g.$mainColor02;
+			width: 100%;
+			padding: 20px 20px 20px 40px;
+			background: transparent;
+			border: 1px solid g.$mainColor02;
+			border-radius: 100px;
+			cursor: pointer;
+			transition: all 0.3s;
+		}
+
+		&::after {
+			content: "";
+    		width: 40px;
+    		height: 40px;
+			margin: auto;
+    		border-radius: 30px;
+    		background: g.$mainColor02 url(../img/common/ico_arrow-white.svg) no-repeat center / 12px;
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			right: 20px;
+		}
+
+		.wpcf7-spinner {
+			display: none;
+		}
+
+	}
+
+	.c-contact-form__return {
+		text-align: center;
+
+		&__btn {
+			background: transparent;
+			border-bottom: 1px solid #aaa;
+			cursor: pointer;
+		}
+
+	}
+	
+}

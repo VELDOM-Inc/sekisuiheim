@@ -1,0 +1,36 @@
+@charset "utf-8";
+@use "../../global/_" as g;
+.c-breadcrumb {
+	margin: 0 0 50px;
+	padding: 10px 0;
+	border-bottom: 1px solid g.$line-gray;
+	font-size: g.$fz-xxs;
+	line-height: 1.4;
+
+	@include g.smMax {
+		margin: 0 0 25px;
+		font-size: g.$fz-xxxs;
+	}
+	&__inner {
+		display: flex;
+		flex-wrap: wrap;
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 0 20px;
+
+		@include g.smMax {
+			padding: 0 15px;
+		}
+	}
+	&__item {
+		text-decoration: none;
+
+		&:not(:last-child) {
+			&::after {
+				margin: 0 10px;
+				content: "\f105";
+				font-family: 'icomoon';
+			}
+		}
+	}
+}

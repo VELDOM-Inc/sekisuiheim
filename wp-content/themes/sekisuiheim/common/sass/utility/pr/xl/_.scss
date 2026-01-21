@@ -1,0 +1,10 @@
+@charset "utf-8";
+@use 'sass:math';
+@use "../../../global/_" as g;
+.u-pr-xl {
+	padding-right: g.$m-xl !important;
+	
+	@include g.smMax {
+		padding-right:math.div(g.$m-xl, 2) !important;
+	}
+}

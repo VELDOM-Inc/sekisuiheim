@@ -1,0 +1,9 @@
+@charset "utf-8";
+@use "../../global/_" as g;
+.m-noscript {
+	padding: 10px 15px;
+	background: g.$baseColor;
+	color: g.$white;
+	font-size: g.$fz-s;
+	text-align: center;
+}

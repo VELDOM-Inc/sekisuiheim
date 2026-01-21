@@ -1,0 +1,19 @@
+@charset "utf-8";
+@use "../../global/_" as g;
+.e-h1 {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 340px;
+	background: url(/temp/common/img/index/bg_ttl01_pc.png) center center no-repeat;
+	background-size: cover;
+	font-size: 3.6rem;
+	text-align: center;
+	line-height: 1.2;
+	@include g.font-bold;
+
+	@include g.smMax {
+		height: 150px;
+		font-size: g.$fz-xxl;
+	}
+}

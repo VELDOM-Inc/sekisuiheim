@@ -1,0 +1,123 @@
+@charset "utf-8";
+@use "../../global/_" as g;
+.m-table {
+	width: 100%;
+	
+	th,
+	td {
+		padding: 15px 20px;
+		border: 1px solid g.$line-gray;
+		text-align: left;
+		vertical-align: middle;
+
+		@include g.smMax {
+			padding: 15px;
+		}
+	}
+	th {
+		@include g.font-bold;
+	}
+	._al-l_ {
+		text-align: left;
+	}
+	._al-r_ {
+		text-align: right;
+	}
+	._al-c_ {
+		text-align: center;
+	}
+	._nowrap_ {
+		white-space: nowrap;
+	}
+	._navy_ {
+		background: g.$baseColor;
+		color: g.$white;
+	}
+	._gray_ {
+		background: #f2f2f2;
+	}
+
+	@include g.smMax {
+		//SP 1カラム -------------------------------
+		&._sp-col1_ {
+			display: block;
+			
+			thead,
+			tbody,
+			tr,
+			th,
+			td {
+				display: block;
+			}
+			th {
+				padding: 10px 15px;
+			}
+		}
+		
+		//横長 -------------------------------
+		&._wide_ {
+			border: none;
+			display: block;
+
+			th,
+			td {
+				display: block;
+				padding: 5px 8px;
+				border-bottom-width: 0;
+				border-right-width: 0;
+				text-align: center;
+			}
+			th{  
+				width: auto;
+				text-align: left;
+			}
+		}
+		&._wide_ &__head {
+			display: block;
+			float: left;
+			overflow-x: scroll;
+		}
+		&._wide_ &__body {
+			display: block;
+			width: auto;
+			overflow-x: auto;
+			white-space: nowrap;
+
+			tr { 
+				display: inline-block; 
+				margin: 0 -3px;
+
+				&:last-child {
+					th,
+					td {
+						border-right-width: 1px;
+					}
+				}
+			}
+		}
+		&._wide_ &__head th:last-child,
+		&._wide_ &__body td:last-child {
+			border-bottom-width: 1px;
+		}
+		
+		//リスト風 -------------------------------
+		&._list_ {
+			border: none;
+
+			tr {
+				display:block;
+				margin: 0 0 20px;
+			}
+			th {
+				display: block;
+			}
+			td {
+				display: list-item;
+				margin: 0 0 0 20px;
+				padding: 5px 0 0;
+				border: none;
+				background: none;
+			}
+		}
+	}
+}

@@ -1,0 +1,5 @@
+@charset "utf-8";
+@use "../../../global/_" as g;
+.u-pr-xs {
+	padding-right: g.$m-xs !important;
+}

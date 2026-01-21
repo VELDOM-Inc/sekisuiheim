@@ -1,0 +1,60 @@
+@charset "utf-8";
+@use "../global/_" as g;
+
+@forward "al/_";
+@forward "c/_";
+@forward "fw/_";
+@forward "fz/_";
+@forward "mb/_";
+@forward "ml/_";
+@forward "mr/_";
+@forward "mt/_";
+@forward "pa/_";
+@forward "pb/_";
+@forward "pl/_";
+@forward "pr/_";
+@forward "pt/_";
+@forward "w/_";
+@forward "mw/_";
+@forward "w-a/_";
+
+.u-xs-min {
+	@include g.xsMax { //max-width: 415px
+		display: none !important;
+	}
+}
+.u-xs-max {
+	@include g.xsMin { //min-width: 416px
+		display: none !important;
+	}
+}
+.u-sm-min {
+	@include g.smMax { //max-width: 768px
+		display: none !important;
+	}
+}
+.u-sm-max {
+	@include g.smMin { //min-width: 769px
+		display: none !important;
+	}
+}
+.u-md-min {
+	@include g.mdMax { //max-width: 1024px
+		display: none !important;
+	}
+}
+.u-md-max {
+	@include g.mdMin { //min-width: 1025px
+		display: none !important;
+	}
+}
+.u-lg-min { 
+	@include g.lgMax { //max-width: 1280px
+		display: none !important;
+	}
+}
+.u-lg-max {
+	@include g.lgMin { //min-width: 1281px
+		display: none !important;
+	}
+}

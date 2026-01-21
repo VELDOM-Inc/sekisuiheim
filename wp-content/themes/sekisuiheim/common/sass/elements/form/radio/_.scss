@@ -1,0 +1,33 @@
+@charset "utf-8";
+@use "../../../global/_" as g;
+.e-form-radio {
+	.__elem {
+		display: none;
+		&:checked + .__txt {
+			&::after {
+				opacity: 1;
+			}
+		}
+	}
+	
+	.__txt {
+		position: relative;
+		padding: 0 0 0 20px;
+		cursor: pointer;
+		&::before {
+			left: 0;
+			content: '';
+			border: 2px solid #d9d9d9;
+			@include g.centering-elements(false, true);
+			@include g.circle(14);
+		}
+		&::after {
+			left: 5px;
+			content: '';
+			background: g.$baseColor;
+			opacity: 0;
+			@include g.centering-elements(false, true);
+			@include g.circle(8);
+		}
+	}
+}

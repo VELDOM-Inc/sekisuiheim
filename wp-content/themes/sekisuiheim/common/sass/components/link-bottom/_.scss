@@ -1,0 +1,191 @@
+@charset "utf-8";
+@use "../../global/_" as g;
+
+.c-link-bottom {
+	padding: 180px 0 190px;
+	position: relative;
+
+	@include g.smMax {
+		padding: 40px 0 60px;
+	}
+
+	&::before {
+		content: "";
+		width: min(1840px,90%);
+		height: 1px;
+		margin: 0 auto;
+		background: g.$subColor01;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+	}
+
+	&__inner {
+		width: min(1280px,90%);
+		margin: 0 auto;
+	}
+
+	&__ttl {
+		@include g.font-mincho;
+		font-size: 4.8rem;
+		line-height: 1.5;
+		text-align: center;
+		color: g.$subColor01;
+		margin-bottom: 190px;
+
+		@media screen and (max-width:1420px) {
+			font-size: 4rem;
+		}
+
+		@include g.lgMax {
+			font-size: 3.2rem;
+		}
+
+		@include g.smMax {
+			font-size: 2rem;
+			margin-bottom: 40px;
+		}
+
+	}
+
+	&__list {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 40px;
+
+		@include g.smMax {
+			flex-direction: column;
+			justify-content: center;
+			gap: 15px;
+		}
+
+		&--btn {
+			width: 48%;
+			padding: 50px 0 50px 80px;
+			border-radius: 200px;
+			position: relative;
+			transition: all 0.3s;
+
+			@include g.lgMax {
+				padding: 40px 0 40px 60px;
+			}
+
+			@include g.mdMax {
+				padding: 20px 0 20px 45px;
+			}
+
+			@include g.smMax {
+				width: min(345px,100%);
+				margin: 0 auto;
+				padding: 20px 0 20px 35px;
+			}
+
+			.__ttl {
+				@include g.font-mincho;
+				font-size: 2.8rem;
+				line-height: 1.35;
+				padding-bottom: 10px;
+				margin-bottom: 15px;
+				border-bottom: 1px solid g.$line-gray;
+				display: inline-block;
+
+				@media screen and (max-width:1420px) {
+					font-size: 2.4rem;
+				}
+
+				@include g.lgMax {
+					font-size: 2rem;
+				}
+
+				@include g.mdMax {
+					font-size: 1.6rem;
+				}
+
+			}
+
+			.__logo {
+				width: 68%;
+				display: block;
+
+				@include g.lgMax {
+					width: 60%;
+				}
+
+				@include g.mdMax {
+					width: 186px;
+				}
+
+			}
+
+			&::after {
+				content: "";
+				background: g.$black url(../img/common/ico_arrow-white.svg) no-repeat center / 13px;
+				width: 48px;
+				height: 48px;
+				margin: auto;
+				border-radius: 50px;
+				position: absolute;
+				right: 80px;
+				top: 0;
+				bottom: 0;
+				transition: all 0.3s;
+
+				@include g.lgMax {
+					right: 50px;
+				}
+
+				@include g.mdMax {
+					width: 40px;
+					height: 40px;
+					right: 30px;
+				}
+
+				@include g.smMax {
+					right: 25px;
+				}
+
+			}
+
+			&.c-link-bottom__list--renovation {
+				border: 3px solid g.$black;
+
+				&:hover {
+					background: g.$subColor03;
+
+					&::after {
+						right: 75px;
+					}
+
+				}
+
+			}
+
+			&.c-link-bottom__list--support {
+				border: 3px solid g.$subColor02;
+
+				&:hover {
+					background: g.$subColor05;
+
+					&::after {
+						right: 75px;
+					}
+
+				}
+
+				.__ttl {
+					color: g.$subColor02;
+				}
+
+				&::after {
+					background: g.$subColor02 url(../img/common/ico_arrow-white.svg) no-repeat center / 13px;
+				}
+
+			}
+
+		}
+
+	}
+
+}

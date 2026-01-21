@@ -1,0 +1,13 @@
+@charset "utf-8";
+@use "../../global/_" as g;
+.t-wrap {
+	padding: 128px 0 0;
+	color: g.$text-black;
+	font-size: g.$fz-m;
+	line-height: 1.8;
+
+	@include g.smMax {
+		padding: 64px 0 0;
+		font-size: g.$fz-s;
+	}
+}

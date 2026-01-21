@@ -1,0 +1,5 @@
+@charset "utf-8";
+@use "../../../global/_" as g;
+.u-mr-m {
+	margin-right: g.$m-m !important;
+}

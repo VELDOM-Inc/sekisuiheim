@@ -1,0 +1,13 @@
+@charset "utf-8";
+@use "../../global/_" as g;
+.e-h6 {
+	margin: 0 0 15px;
+	color: g.$baseColor;
+	font-size: g.$fz-m;
+	@include g.font-bold;
+
+	@include g.smMax {
+		margin: 0 0 15px;
+		font-size: g.$fz-s;
+	}
+}

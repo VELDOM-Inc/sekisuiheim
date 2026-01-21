@@ -1,0 +1,103 @@
+@charset "utf-8";
+@use "../../global/_" as g;
+
+.contact_btn {
+	@include g.font-mincho;
+	font-size: 2rem;
+	color: g.$white;
+	padding: 20px 0;
+	background: g.$subColor05;
+	background: #95C9EE;background: linear-gradient(90deg, rgba(149, 201, 238, 1) 0%, rgba(3, 110, 184, 1) 84%);
+	border: 2px solid g.$subColor05;
+	border-radius: 100px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 15px;
+
+	&::after {
+		content: "";
+		width: 32px;
+		height: 32px;
+		border-radius: 30px;
+		background: g.$white url(../img/common/ico_arrow-blue.svg) no-repeat center / 12px;
+	}
+
+}
+
+.freecall_btn {
+	@include g.font-en;
+	font-size: 4rem;
+	font-weight: 600;
+	line-height: 1;
+	color: g.$white;
+	padding: 20px 0 20px 30px;
+	background: g.$subColor05;
+	background: linear-gradient(90deg, rgba(149, 201, 238, 1) 0%, rgba(3, 110, 184, 1) 84%);
+	border: 2px solid g.$subColor05;
+	border-radius: 100px;
+	display: flex;
+	justify-content: flex-start;
+	flex-wrap: wrap;
+
+	.__ttl {
+		width: 117px;
+		aspect-ratio: 1175/200;
+		margin-bottom: 10px;
+		background: url(../img/common/ico_center.svg) no-repeat center / 100%;
+	}
+
+	.__sub {
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+		gap: 3px;
+
+		&::before {
+			content: "";
+			width: 37px;
+			aspect-ratio: 37/29;
+			background: url(../img/common/pic_freecall.svg) no-repeat center / 100%;
+		}
+
+	}
+
+}
+
+.link_blank {
+	font-size: 1.5rem;
+	font-weight: 500;
+	line-height: 1;
+	text-decoration: underline;
+	color: g.$mainColor02;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 4px;
+
+	&::after {
+		content: "";
+		width: 14px;
+		aspect-ratio: 1;
+		background: url(../img/common/ico_blank.svg) no-repeat center / 100%;
+	}
+
+}
+
+.ol_link {
+	font-weight: 500;
+	line-height: 1;
+	color: g.$mainColor02;
+	display: flex;
+	align-items: center;
+	gap: 4px;
+
+	&::before {
+		content: "";
+		width: 5px;
+		height: 5px;
+		border-radius: 5px;
+		background: g.$mainColor02;
+	}
+
+}

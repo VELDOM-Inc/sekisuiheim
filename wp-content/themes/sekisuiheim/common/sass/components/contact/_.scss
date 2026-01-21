@@ -1,0 +1,228 @@
+@charset "utf-8";
+@use "../../global/_" as g;
+.c-contact {
+	width: min(1280px,90%);
+	margin: 0 auto;
+
+	&-tel {
+		width: min(960px,100%);
+		padding: 50px 100px;
+		margin: 0 auto 180px;
+		border: 3px solid g.$mainColor02;
+		border-radius: 200px;
+		display: flex;
+		justify-content: space-between;
+		gap: 45px;
+
+		@include g.mdMax {
+			padding: 30px 80px;
+		}
+
+		@include g.smMax {
+			padding: 20px 35px;
+			margin: 0 auto 50px;
+			border: 2px solid g.$mainColor02;
+			flex-direction: column;
+			gap: 15px;
+		}
+
+		@include g.xsMax {
+			padding: 20px 30px;
+		}
+
+		.c_ttl {
+			font-size: 3.2rem;
+			line-height: 1.5;
+			color: g.$mainColor02;
+
+			@include g.lgMax {
+				font-size: 2.6rem;
+			}
+
+			@include g.smMax {
+				font-size: 2rem;
+				text-align: center;
+				width: 100%;
+				justify-content: center;
+			}
+
+		}
+
+		.freecall_btn {
+			padding: 0;
+			background: transparent;
+			border: none;
+			flex-direction: column;
+
+			.__ttl {
+				filter: brightness(0) saturate(100%) invert(12%) sepia(22%) saturate(2642%) hue-rotate(353deg) brightness(102%) contrast(90%);
+			}
+
+			.__sub {
+				font-size: 7.2rem;
+				color: g.$mainColor02;
+
+				@include g.lgMax {
+					font-size: 5.6rem;
+				}
+
+				@include g.smMax {
+					font-size: 4rem;
+				}
+
+				@include g.xsMax {
+					font-size: 3.4rem;
+				}
+
+				&::before {
+					width: 72px;
+					aspect-ratio: 71 / 56;
+					background: url(../img/common/pic_freecall-contact.svg) no-repeat center / 100%;
+
+					@include g.smMax {
+						width: 37px;
+					}
+
+				}
+
+			}
+
+		}
+
+	}
+
+	&__step2 {
+		@include g.font-mincho;
+		font-size: 3.2rem;
+		line-height: 1.8;
+		color: g.$mainColor02;
+		margin-bottom: 80px;
+
+		@include g.smMax {
+			font-size: 2.4rem;
+			margin-bottom: 40px;
+		}
+
+	}
+
+	&.__confirm {
+		margin-bottom: 180px;
+
+		@include g.smMax {
+			margin-bottom: 80px;
+		}
+
+		.c-contact-form__item {
+			font-size: 2rem;
+			line-height: 2;
+
+			@include g.smMax {
+				font-size: 1.8rem;
+			}
+
+		}
+
+		.c-contact-form__body {
+			margin-bottom: 80px;
+
+			@include g.smMax {
+				margin-bottom: 60px;
+			}
+
+		}
+
+		.c-contact-form__btn {
+			margin-bottom: 40px;
+
+			@include g.smMax {
+				margin-bottom: 25px;
+			}
+
+		}
+
+		.c-contact-form__return {
+			width: 240px;
+			margin: 0 auto;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			gap: 15px;
+
+			@include g.smMax {
+				width: 200px;
+			}
+
+			.c-contact-form__return__btn {
+				@include g.font-mincho;
+				font-size: 2rem;
+				color: g.$mainColor02;
+				border: none;
+			}
+
+			&::before {
+				content: "";
+    			width: 40px;
+    			height: 40px;
+    			margin: auto;
+    			border-radius: 30px;
+    			background: g.$mainColor02 url(../img/common/ico_arrow-white.svg) no-repeat center / 12px;
+				transform: rotate(180deg);
+			}
+
+		}
+
+	}
+
+	&-complete {
+		margin-bottom: 180px;
+
+		@include g.smMax {
+			margin-bottom: 80px;
+		}
+
+		&__ttl {
+			@include g.font-mincho;
+			font-size: clamp(3.2rem, 2.228rem + 2.03vw, 4rem);
+			text-align: center;
+			line-height: 1;
+			color: g.$mainColor02;
+			width: 90%;
+			margin: 0 auto 45px;
+		}
+
+		&__txt {
+			font-size: clamp(1.6rem, 1.357rem + 0.51vw, 1.8rem);
+			line-height: 1.8;
+			text-align: center;
+			color: g.$black;
+			width: 90%;
+			margin: 0 auto 70px;
+		}
+
+		&__btn {
+			@include g.font-mincho;
+			font-size: 2rem;
+			line-height: 1;
+			color: g.$mainColor02;
+			border: 1px solid g.$mainColor02;
+			border-radius: 50px;
+			width: min(400px,90%);
+			margin: 0 auto;
+			padding: 20px 20px 20px 40px;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+
+			&::after {
+				content: "";
+    			background: g.$mainColor02 url(../img/common/ico_arrow-white.svg) no-repeat center / 13px;
+    			width: 40px;
+    			height: 40px;
+    			border-radius: 50px;
+			}
+
+		}
+
+	}
+
+}

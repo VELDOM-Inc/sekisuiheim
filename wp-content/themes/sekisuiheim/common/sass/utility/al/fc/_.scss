@@ -1,0 +1,10 @@
+@charset "utf-8";
+@use "../../../global/_" as g;
+.u-al-fc {
+	display: flex !important;
+	flex-wrap: wrap !important;
+	justify-content: center !important;
+	& > * {
+		flex: 0 0 auto !important;
+	}
+}

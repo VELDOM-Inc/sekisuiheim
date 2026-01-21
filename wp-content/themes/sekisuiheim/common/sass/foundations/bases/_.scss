@@ -1,0 +1,87 @@
+@charset "utf-8";
+@use "../../global/_" as g;
+
+html {
+	@include g.smMin {
+		overflow-y: scroll;
+	}
+	@include g.smBtMd {
+		font-size: calc(100vw / 102.4);
+	}
+}
+body {
+	@include g.font-normal;
+}
+a {
+	color: g.$baseColor;
+	text-decoration: none;
+	
+	@include g.hover {
+		text-decoration: none;
+	}
+	.icon-filter_none::before {
+		display: inline-block;
+	}
+}
+sup {
+	vertical-align: super;
+}
+input,
+textarea {
+	appearance: none;
+	max-width: 100%;
+}
+input,
+select,
+textarea {
+	@include g.smMax {
+		font-size: g.$fz-m !important;
+	}
+}	
+input::placeholder {
+	opacity: .5;
+}
+button,
+input[type="button"],
+input[type="submit"] {
+	appearance: none;
+}
+.icon-filter_none {
+	margin: 0 3px;
+	color: g.$baseColor;
+}
+
+@media (min-width: 769px) {
+a[href^="tel:"] {
+    pointer-events: none;
+    cursor: default;
+}
+}
+
+/* animation */
+.add-animation {
+  animation: zoom 10s linear 0s normal both;
+}
+
+.opacity {
+	opacity: 1;
+	transition: all 0.3s;
+
+	&:hover {
+		opacity: 0.5;
+	}
+
+}
+
+/* keyframes */
+@keyframes zoom {
+
+	0% {
+    	transform: scale(1);
+	}
+
+	100% {
+   		transform: scale(1.05);
+	}
+	
+}

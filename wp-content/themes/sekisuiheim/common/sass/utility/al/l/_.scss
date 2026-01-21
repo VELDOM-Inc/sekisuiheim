@@ -1,0 +1,17 @@
+@charset "utf-8";
+@use "../../../global/_" as g;
+.u-al-l {
+	text-align: left !important;
+
+	@include g.smMax {
+		&._sm-al-l_ {
+			text-align: left !important;
+		}
+		&._sm-al-c_ {
+			text-align: center !important;
+		}
+		&._sm-al-r_ {
+			text-align: right !important;
+		}
+	}
+}

@@ -1,0 +1,90 @@
+@charset "utf-8";
+
+// ============================================================
+// breakpoint
+// ============================================================
+$sxs: 375;
+$xs: 415; // mobile
+$sm: 768; //mobile
+$md: 1024; //tablet(大)
+$lg: 1280;
+
+$xs-1: $xs + 1;
+$sm-1: $sm + 1;
+$md-1: $md + 1;
+$lg-1: $lg + 1;
+
+$xsMin: 'min-width:' + $xs-1 + 'px';
+$smMin: 'min-width:' + $sm-1 + 'px';
+$mdMin: 'min-width:' + $md-1 + 'px';
+$lgMin: 'min-width:' + $lg-1 + 'px';
+
+$xsMax: 'max-width:' + $xs + 'px';
+$smMax: 'max-width:' + $sm + 'px';
+$mdMax: 'max-width:' + $md + 'px';
+$lgMax: 'max-width:' + $lg + 'px';
+
+
+// ============================================================
+// color
+// ============================================================
+$baseColor: #363636;
+
+$text-black: #363636;
+
+$mainColor01: #633126;
+$mainColor02: #42250F;
+$mainColor03: #E6DED3;
+
+$subColor01: #2A0A03;
+$subColor02: #036EB8;
+$subColor03: #BAAA9E;
+$subColor04: #BCA8A3;
+$subColor05: #95C9EE;
+$subColor06: #F6C100;
+$subColor07: #907764;
+$subColor08: #E48900;
+
+$bg01: #F4F4F4;
+
+$line-gray: #d3d3d3;
+
+$red: #dd0000;
+$white: #ffffff;
+$black: #000000;
+
+// ============================================================
+// font size
+// ============================================================
+$fz-xxxs: 1.0rem;
+$fz-xxs: 1.2rem;
+$fz-xs: 1.3rem;
+$fz-s: 1.4rem;
+$fz-m: 1.6rem;
+$fz-l: 1.8rem;
+$fz-xl: 2.0rem;
+$fz-xxl: 2.2rem;
+$fz-xxxl: 2.4rem;
+
+
+// ============================================================
+// マージンサイズ
+// ============================================================
+$m-xxxs: 10px;
+$m-xxs: 15px;
+$m-xs: 20px;
+$m-s: 25px;
+$m-m: 30px;
+$m-l: 60px;
+$m-xl: 80px;
+$m-xxl: 100px;
+$m-xxxl: 150px;
+
+
+// ============================================================
+// grid
+// ============================================================
+$maxcol: 12;
+$max-width: 100%;
+$grid-margin: 20px; //PC用 カラム間余白
+$grid-margin-sm: 10px; //SP用 カラム間余白

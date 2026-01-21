@@ -1,0 +1,52 @@
+@charset "utf-8";
+@use "../../global/_" as g;
+.l-contents {
+	margin: 0 auto 80px;
+
+	// 以下不要な場合削除
+	// 2カラムレイアウト-------------------------------
+	&._col2_ &__inner {
+		@include g.smMin {
+			display: grid;
+			grid-template-columns: 1fr 240px;
+			grid-template-rows: auto;
+			gap: 0 40px;
+			grid-template-areas: "body side";
+		}
+		@include g.smMax {
+			display: grid;
+			grid-template-columns: 100%;
+			grid-template-rows: auto auto;
+			gap: 60px 0;
+			grid-template-areas:
+				"body"
+				"side";
+		}
+	}
+	&._col2_ &__body { grid-area: body; }
+	&._col2_ &__side { grid-area: side; }
+
+	// 3カラムレイアウト-------------------------------
+	&._col3_ &__inner {
+		@include g.mdMin {
+			display: grid;
+			grid-template-columns: minmax(200px, 25%) 1fr minmax(200px, 25%);
+			grid-template-rows: auto;
+			gap: 0 30px;
+			grid-template-areas: "left main right";
+		}
+		@include g.mdMax {
+			display: grid;
+			grid-template-columns: 100%;
+			grid-template-rows: auto auto auto;
+			gap: 50px 0;
+			grid-template-areas:
+				"main"
+				"right"
+				"left";
+		}
+	}
+	&._col3_ &__body { grid-area: main; }
+	&._col3_ &__left { grid-area: left; }
+	&._col3_ &__right { grid-area: right; }
+}

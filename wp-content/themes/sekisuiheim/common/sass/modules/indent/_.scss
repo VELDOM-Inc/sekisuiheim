@@ -1,0 +1,13 @@
+@charset "utf-8";
+@use "../../global/_" as g;
+.m-indent {
+	display: table;
+	
+	.__item {
+		display: table-cell;
+		white-space: nowrap;
+	}
+	&._space_ .__item {
+		padding-right: 1em;
+	}
+}

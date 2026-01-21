@@ -1,0 +1,6 @@
+@charset "utf-8";
+@use "../../../global/_" as g;
+
+.u-c-red {
+	color: g.$red !important;
+}
