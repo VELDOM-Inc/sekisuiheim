@@ -63,6 +63,18 @@ a[href^="tel:"] {
   animation: zoom 10s linear 0s normal both;
 }
 
+.is-fade {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s, transform 0.8s;
+}
+
+.is-fade.is-inview {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.5s;
+}
+
 .opacity {
 	opacity: 1;
 	transition: all 0.3s;

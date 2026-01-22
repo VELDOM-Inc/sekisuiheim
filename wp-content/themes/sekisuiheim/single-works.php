@@ -1,12 +1,12 @@
 <?php get_header(); ?>
 
 	<div class="c-mv">
-		<h1 class="c_ttl" data-en="WORKS">実績紹介</h1>
+		<h1 class="c_ttl is-fade" data-en="WORKS">実績紹介</h1>
 	</div>
 
 	<div class="c-works-detail">
 		<section class="c-works-detail__item">
-			<div class="c-works-detail__info">
+			<div class="c-works-detail__info is-fade">
 				<div class="c-works-detail__time"><time datetime="<?php echo get_the_date('Y-m-d'); ?>"><?php echo get_the_date('Y.m.d'); ?></time></div>
 
 				<!-- termsループ -->
@@ -22,12 +22,12 @@
 				?>
 					
 			</div>
-			<h2 class="c_ttl"><?php the_title(); ?></h2>
+			<h2 class="c_ttl is-fade"><?php the_title(); ?></h2>
 			<?php $site_url = get_field('catch'); ?>
 			<?php if ( !empty($site_url) ) : ?>
-				<p class="__catch"><?php the_field('catch'); ?></p>
+				<p class="__catch is-fade"><?php the_field('catch'); ?></p>
 			<?php endif; ?>
-			<div class="c-works-detail__img">
+			<div class="c-works-detail__img is-fade">
 				<?php if ( has_post_thumbnail() ) : ?>
         			<img src="<?php the_post_thumbnail_url('full'); ?>" alt="<?php the_title(); ?>" class="__img" loading="lazy">
     			<?php else : ?>
@@ -36,7 +36,7 @@
 			</div>
 
 			<div class="c-works-detail__column">
-				<section class="c-works-detail__column--list __plan">
+				<section class="c-works-detail__column--list __plan is-fade">
 					<h3 class="c_ttl" data-en="PLAN">間取りプラン</h3>
 					<div class="c-works-detail__comparison">
 						<div class="c-works-detail__comparison--ttl">
@@ -49,7 +49,7 @@
 						</div>
 					</div>
 				</section>
-				<section class="c-works-detail__column--list __before">
+				<section class="c-works-detail__column--list __before is-fade">
 					<h3 class="c_ttl" data-en="BEFORE">工事前の様子</h3>
 					<div class="c-works-detail__before">
 						<?php if(have_rows('state')): ?>
@@ -61,8 +61,8 @@
 				</section>
 			</div>
 			<section class="c-works-detail__point">
-				<h3 class="c_ttl" data-en="POINT">おすすめポイント</h3>
-				<ul class="c-works-detail__point--ul">
+				<h3 class="c_ttl is-fade" data-en="POINT">おすすめポイント</h3>
+				<ul class="c-works-detail__point--ul is-fade">
 					<?php if(have_rows('point_txt')): ?>
                         <?php while(have_rows('point_txt')): the_row(); ?>
 							<li class="c-works-detail__point--li"><?php the_sub_field('point_txt_list'); ?></li>
@@ -70,7 +70,7 @@
 					<?php else: ?>
 					<?php endif; ?>
 				</ul>
-				<div class="c-works-detail__point--img">
+				<div class="c-works-detail__point--img is-fade">
 					<?php if(have_rows('point_img')): ?>
                         <?php while(have_rows('point_img')): the_row(); ?>
 							<div class="c-works-detail__before--imglist"><img src="<?php the_sub_field('point_img_list'); ?>" alt="<?php the_title(); ?>" class="__img"></div>

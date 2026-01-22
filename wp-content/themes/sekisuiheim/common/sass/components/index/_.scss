@@ -127,6 +127,7 @@
 
 			@include g.smMax {
 				padding: 20px 30px;
+				align-items: center;
 			}
 
 			.__ttl {
@@ -135,6 +136,16 @@
 
 				@include g.smMax {
 					width: 117px;
+					display: block;
+        			margin: 0 auto 10px 53px;
+				}
+
+				@media screen and (max-width:500px) {
+					margin: 0 auto 10px 8%;
+				}
+
+				@include g.xsMax {
+					margin: 0 auto 10px calc(0.1in - 2px);
 				}
 
 			}
@@ -533,6 +544,14 @@
 
 			@include g.smMax {
 				width: 200px;
+			}
+
+			&:nth-of-type(2) {
+				transition-delay: 1s;
+			}
+
+			&:last-of-type {
+				transition-delay: 1.5s;
 			}
 
 			.__ttl {
@@ -940,6 +959,20 @@
 
 	}
 
+	&__txt {
+		font-size: 1.8rem;
+		margin-bottom: 45px;
+
+		@include g.mdMax {
+			font-size: 1.6rem;
+		}
+
+		@include g.smMax {
+			margin-bottom: 30px;
+		}
+
+	}
+
 	&__catch {
 		@include g.font-mincho;
 		font-size: clamp(1.6rem, 0.628rem + 2.03vw, 2.4rem);
@@ -1232,6 +1265,10 @@
 		align-items: flex-start;
 		gap: 45px;
 		position: relative;
+
+		@include g.smMax {
+			padding-right: 10px;
+		}
 
 		&::before {
 			content: "";

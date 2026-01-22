@@ -1,14 +1,14 @@
 <?php get_header(); ?>
 
     <div class="c-mv">
-		<h1 class="c_ttl" data-en="WORKS">実績紹介</h1>
+		<h1 class="c_ttl is-fade" data-en="WORKS">実績紹介</h1>
 	</div>
 
 	<div class="c-works">
 
-		<p class="__catch">ゼロからつくる<br>「スケルトンリノベーション」<br class="u-sm-max">の実績を紹介します。</p>
+		<p class="__catch is-fade">ゼロからつくる<br>「スケルトンリノベーション」<br class="u-sm-max">の実績を紹介します。</p>
 		<div class="c-works-category">
-			<div class="c-works-category__list">	
+			<div class="c-works-category__list is-fade">	
 				<!-- すべて -->
 				<a class="c-works-category__link category-all" href="<?php echo home_url(); ?>/works/">すべて</a>
 				<?php
@@ -53,7 +53,7 @@
                 if ($the_query->have_posts()) : while ($the_query->have_posts()) : $the_query->the_post();
     		?>
 
-			<div class="c-works-list__item">
+			<div class="c-works-list__item is-fade">
 				<a class="c-works-list__link" href="<?php the_permalink(); ?>">
 					<div class="c-works-list__img">
 						<?php if ( has_post_thumbnail() ) : ?>

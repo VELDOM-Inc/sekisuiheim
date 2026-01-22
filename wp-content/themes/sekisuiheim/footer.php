@@ -1,5 +1,5 @@
 			<div class="c-link-bottom">
-				<section class="c-link-bottom__inner">
+				<section class="c-link-bottom__inner is-fade">
 					<h2 class="c-link-bottom__ttl">たくさんの『理想の家』を<br class="u-sm-max">創ってきたセキスイハイムが、<br>ご家族の「こうしたい！」を<br class="u-sm-max">カタチにします</h2>
 					<div class="c-link-bottom__list">
 						<a href="https://www.sekifu.co.jp/company/group/" class="c-link-bottom__list--btn c-link-bottom__list--renovation" target="__blank">

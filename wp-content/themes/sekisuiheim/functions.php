@@ -72,6 +72,7 @@ function add_link_files() {
   // JavaScriptの読み込み
   wp_enqueue_script( 'jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js', array(), NULL, false );
   wp_enqueue_script( 'common-js', get_template_directory_uri().'/common/js/common.js', array('jquery'), false, true );
+  wp_enqueue_script( 'inview-js', get_template_directory_uri().'/common/js/jquery.inview.min.js', array('jquery'), false, true );
 
   if ( is_front_page() ) {
     wp_enqueue_script( 'slick', get_template_directory_uri().'/common/js/slick.min.js', array('jquery'), false, true );
