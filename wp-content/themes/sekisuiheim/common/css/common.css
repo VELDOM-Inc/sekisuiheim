@@ -4789,6 +4789,60 @@ input[type=submit] {
   }
 }
 
+.error-mv .c_ttl {
+  font-family: "Urbanist", sans-serif;
+  font-weight: 400;
+  font-size: clamp(4.8rem, -49.2rem + 57.6vw, 12rem);
+}
+@media screen and (max-width:768px) {
+  .error-mv .c_ttl {
+    text-align: center;
+  }
+}
+
+.c-error {
+  width: min(1280px, 90%);
+  margin: 0 auto 180px;
+}
+.c-error .c_ttl {
+  text-align: center;
+  color: #42250F;
+  margin-bottom: 45px;
+  justify-content: center;
+}
+.c-error .c_txt {
+  font-size: 1.8rem;
+  line-height: 1.8;
+  text-align: center;
+  margin-bottom: 80px;
+}
+@media screen and (max-width:768px) {
+  .c-error .c_txt {
+    font-size: 1.5rem;
+  }
+}
+.c-error .c_btn {
+  font-family: "Zen Old Mincho", serif;
+  font-weight: 700;
+  font-size: clamp(1.6rem, 1.147rem + 0.71vw, 2rem);
+  color: #42250F;
+  width: min(400px, 100%);
+  margin: 0 auto;
+  padding: 20px 20px 20px 40px;
+  border: 1px solid #42250F;
+  border-radius: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.c-error .c_btn::after {
+  content: "";
+  width: 40px;
+  height: 40px;
+  background: #42250F url(../img/common/ico_arrow-white.svg) no-repeat center/14px;
+  border-radius: 40px;
+}
+
 .c-pagetop {
   position: fixed;
   right: 50px;
