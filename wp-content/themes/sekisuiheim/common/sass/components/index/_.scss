@@ -1260,15 +1260,12 @@
 	&__list {
 		width: min(calc((100% - 1280px) / 2 + 1280px),95%);
 		margin-left: auto;
+		margin-right: 10px;
 		overflow-x: scroll;
 		display: flex;
 		align-items: flex-start;
 		gap: 45px;
 		position: relative;
-
-		@include g.smMax {
-			padding-right: 10px;
-		}
 
 		&::before {
 			content: "";

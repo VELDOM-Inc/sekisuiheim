@@ -108,6 +108,7 @@
         			'post_type' => 'works',
         			'posts_per_page' => 4,
         			'orderby' => 'date',
+					'order' => 'DESC',
         			'paged' => $paged,
       			);
       			$the_query = new WP_Query($args);
@@ -241,62 +242,62 @@
 			<div class="c-index-flow__item">
 				<div class="__number">01</div>
 				<div class="c-index-flow__ttl">ご相談</div>
-				<p class="c-index-flow__txt">お住まいのお困りごと、ご希望、<br class="u-sm-min">何でもお気軽にご相談ください。<br>知識・経験豊富なスタッフが<br class="u-sm-min">アドバイスいたします。<br><a href="<?php echo home_url(); ?>/contact/" class="__link">お問い合わせ</a>はこちらから</p>
+				<p class="c-index-flow__txt">お住まいのお困りごと、ご希望、何でもお気軽にご相談ください。<br>知識・経験豊富なスタッフがアドバイスいたします。<br><a href="<?php echo home_url(); ?>/contact/" class="__link">お問い合わせ</a>はこちらから</p>
 				<div class="c-index-flow__img"><img src="<?php echo get_template_directory_uri(); ?>/common/img/top/pic_flow01.jpg" alt="ご相談" class="__img"></div>
 			</div>
 			<div class="c-index-flow__item">
 				<div class="__number">02</div>
 				<div class="c-index-flow__ttl">住宅診断</div>
-				<p class="c-index-flow__txt">リノベーションを検討されている<br class="u-sm-min">お住まいの状態、構造、配管などを<br class="u-sm-min">無料で調査いたします。</p>
+				<p class="c-index-flow__txt">リノベーションを検討されているお住まいの状態、構造、配管などを無料で調査いたします。</p>
 				<div class="c-index-flow__img"><img src="<?php echo get_template_directory_uri(); ?>/common/img/top/pic_flow02.jpg" alt="住宅診断" class="__img"></div>
 			</div>
 			<div class="c-index-flow__item">
 				<div class="__number">03</div>
 				<div class="c-index-flow__ttl">プラン提案</div>
-				<p class="c-index-flow__txt">住宅診断を踏まえてのご希望、<br class="u-sm-min">ご要望を形にしたプランを提案いたします。<br>現況図・平面図・パース図・ARを提示し、<br class="u-sm-min">分かりやすさに努めています。</p>
+				<p class="c-index-flow__txt">住宅診断を踏まえてのご希望、ご要望を形にしたプランを提案いたします。<br>現況図・平面図・パース図・ARを提示し、分かりやすさに努めています。</p>
 				<div class="c-index-flow__img"><img src="<?php echo get_template_directory_uri(); ?>/common/img/top/pic_flow03.jpg" alt="プラン提案" class="__img"></div>
 			</div>
 			<div class="c-index-flow__item">
 				<div class="__number">04</div>
 				<div class="c-index-flow__ttl">お見積り</div>
-				<p class="c-index-flow__txt">お客様とのお打合せで完成した、<br class="u-sm-min">ご希望が実現するプランで<br class="u-sm-min">お見積りを提示します。<br>工事内容、工事費用を<br class="u-sm-min">丁寧にご説明いたします。
-				<span class="__sub">工事の範囲や、工事内容、設備仕様など<br class="u-sm-min">しっかりご確認ください。<br>ショールームへのご案内もいたします。</span>
+				<p class="c-index-flow__txt">お客様とのお打合せで完成した、ご希望が実現するプランでお見積りを提示します。<br>工事内容、工事費用を丁寧にご説明いたします。
+				<span class="__sub">工事の範囲や、工事内容、設備仕様などしっかりご確認ください。<br>ショールームへのご案内もいたします。</span>
 				</p>
 				<div class="c-index-flow__img"><img src="<?php echo get_template_directory_uri(); ?>/common/img/top/pic_flow04.jpg" alt="お見積り" class="__img"></div>
 			</div>
 			<div class="c-index-flow__item">
 				<div class="__number">05</div>
 				<div class="c-index-flow__ttl">ご契約</div>
-				<p class="c-index-flow__txt">図面・仕様書・打合せ工事スケジュール・ 御見積書・資金計画をご確認いただき、ご契約となります。
-				<span class="__sub">ローンをお考えのお客様には、ご契約の前に<br class="u-sm-min">ローンの審査をお願いしています。</span>
-				<span class="__sub">リフォームのローンについて、<br class="u-sm-min">提携の信販会社によるリフォーム<br class="u-sm-min">ローン、住宅ローン残債がお有りの方の<br class="u-sm-min">ローン計画立案などのご相談を<br class="u-sm-min">承っています。</span>
+				<p class="c-index-flow__txt">図面・仕様書・打合せ工事スケジュール・ 御見積書・資金計画をご確認いただき、ご契約となります。<br>
+				<span class="__sub">ローンをお考えのお客様には、ご契約の前にローンの審査をお願いしています。</span><br>
+				<span class="__sub">リフォームのローンについて、提携の信販会社によるリフォームローン、住宅ローン残債がお有りの方のローン計画立案などのご相談を承っています。</span>
 				</p>
 				<div class="c-index-flow__img"><img src="<?php echo get_template_directory_uri(); ?>/common/img/top/pic_flow05.jpg" alt="ご契約" class="__img"></div>
 			</div>
 			<div class="c-index-flow__item">
 				<div class="__number">06</div>
 				<div class="c-index-flow__ttl">最終打合せ</div>
-				<p class="c-index-flow__txt">図面・仕様書・工程表・御見積書の<br class="u-sm-min">工事前最終確認です。</p>
+				<p class="c-index-flow__txt">図面・仕様書・工程表・御見積書の工事前最終確認です。</p>
 				<div class="c-index-flow__img"><img src="<?php echo get_template_directory_uri(); ?>/common/img/top/pic_flow06.jpg" alt="最終打合せ" class="__img"></div>
 			</div>
 			<div class="c-index-flow__item">
 				<div class="__number">07</div>
 				<div class="c-index-flow__ttl">着工・施工</div>
-				<p class="c-index-flow__txt">着工前にご近所へご挨拶を行います。<br>ご近所への配慮、安全のために養生を<br class="u-sm-min">しっかり実施し、迅速、丁寧に工事を<br class="u-sm-min">進めます。
-				<span class="__sub">追加・変更が生じた場合は図面にて<br class="u-sm-min">追加変更内容を確認し、正確に進めます。</span>
+				<p class="c-index-flow__txt">着工前にご近所へご挨拶を行います。<br>ご近所への配慮、安全のために養生をしっかり実施し、迅速、丁寧に工事を進めます。<br>
+				<span class="__sub">追加・変更が生じた場合は図面にて追加変更内容を確認し、正確に進めます。</span>
 				</p>
 				<div class="c-index-flow__img"><img src="<?php echo get_template_directory_uri(); ?>/common/img/top/pic_flow07.jpg" alt="着工・施工" class="__img"></div>
 			</div>
 			<div class="c-index-flow__item">
 				<div class="__number">08</div>
 				<div class="c-index-flow__ttl">完成・引渡</div>
-				<p class="c-index-flow__txt">セキスイにて工事完了の検査を実施し、<br class="u-sm-min">その後お客様と完成確認をいたします。</p>
+				<p class="c-index-flow__txt">セキスイにて工事完了の検査を実施し、その後お客様と完成確認をいたします。</p>
 				<div class="c-index-flow__img"><img src="<?php echo get_template_directory_uri(); ?>/common/img/top/pic_flow08.jpg" alt="完成・引渡" class="__img"></div>
 			</div>
 			<div class="c-index-flow__item">
 				<div class="__number en">AFTER<br>SERVICE</div>
 				<div class="c-index-flow__ttl">アフターサービス</div>
-				<p class="c-index-flow__txt">工事図面をセキスイのデータベースに<br class="u-sm-min">登録し、お客様の情報を保管、<br class="u-sm-min">実施したリフォーム工事の問合せや<br class="u-sm-min">ご相談に対応いたします。</p>
+				<p class="c-index-flow__txt">工事図面をセキスイのデータベースに登録し、お客様の情報を保管、実施したリフォーム工事の問合せやご相談に対応いたします。</p>
 				<div class="c-index-flow__img"><img src="<?php echo get_template_directory_uri(); ?>/common/img/top/pic_flow09.jpg" alt="アフターサービス" class="__img"></div>
 			</div>
 		</div>

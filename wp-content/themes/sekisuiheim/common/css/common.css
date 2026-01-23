@@ -2945,16 +2945,12 @@ input[type=submit] {
 .c-index-flow__list {
   width: min((100% - 1280px) / 2 + 1280px, 95%);
   margin-left: auto;
+  margin-right: 10px;
   overflow-x: scroll;
   display: flex;
   align-items: flex-start;
   gap: 45px;
   position: relative;
-}
-@media screen and (max-width:768px) {
-  .c-index-flow__list {
-    padding-right: 10px;
-  }
 }
 .c-index-flow__list::before {
   content: "";
