@@ -479,16 +479,20 @@
 	}
 
 	&__catch {
-		@include g.font-en;
-		font-size: clamp(4.8rem, -3.949rem + 18.23vw, 12rem);
+		@include g.font-mincho;
+		font-size: 4.8rem;
 		line-height: 1.35;
 		text-align: center;
 		width: 100%;
 		margin: 0 auto 150px;
 		color: g.$mainColor02;
 
+		@include g.lgMax {
+			font-size: 3.6rem;
+		}
+
 		@include g.smMax {
-			font-size: 4.8rem;
+			font-size: 2.4rem;
 			margin: 0 auto 40px;
 		}
 
@@ -1337,7 +1341,7 @@
 				@include g.font-mincho;
 				font-size: clamp(1.8rem, 1.071rem + 1.52vw, 2.4rem);
 				color: g.$mainColor02;
-				margin-bottom: 30px;
+				margin-bottom: 20px;
 
 				@include g.smMax {
 					font-size: 1.8rem;
@@ -1350,7 +1354,6 @@
 				font-size: clamp(1.5rem, 1.378rem + 0.25vw, 1.6rem);
 				line-height: 1.8;
 				color: g.$black;
-				margin-bottom: 30px;
 
 				@include g.smMax {
 					font-size: 1.5rem;
@@ -1376,7 +1379,7 @@
 
 			.c-index-flow__img {
 				width: 150px;
-				margin-right: 150px;
+				margin: 0 150px 30px 0;
 
 				@include g.smMax {
 					margin-right: 0;

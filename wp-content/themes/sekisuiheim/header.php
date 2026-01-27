@@ -27,10 +27,7 @@
 				<div class="l-header__inner">
 					<div class="l-header-logo">
 						<a class="l-header-logo__link" href="<?php echo home_url(); ?>">
-							<picture class="__pic">
-								<source media="(max-width:768px)" srcset="<?php echo get_template_directory_uri(); ?>/common/img/common/logo_detail.svg" alt="SEKISUI HEIM">
-								<img src="<?php echo get_template_directory_uri(); ?>/common/img/common/logo.svg" alt="SEKISUI HEIM" class="__img">
-							</picture>
+							<img src="<?php echo get_template_directory_uri(); ?>/common/img/common/logo.svg" alt="SEKISUI HEIM" class="__img">
 						</a>
 					</div>
 					<div class="l-gnav">
@@ -44,7 +41,7 @@
 									<a class="ol_link opacity" href="<?php echo home_url(); ?>">TOP</a>
 								</li>
 								<li class="l-gnav__item">
-									<a class="ol_link opacity" href="<?php echo home_url(); ?>/works/">実績紹介</a>
+									<a class="ol_link opacity" href="<?php echo home_url(); ?>/works/">実例紹介</a>
 								</li>
 								<li class="l-gnav__item">
 									<a class="ol_link opacity" href="<?php echo home_url(); ?>/contact/">お問い合わせ</a>
@@ -60,7 +57,7 @@
 						</div>
 						<div class="l-header-sp__menu">
 							<a class="l-header-sp__menu--link" href="<?php echo home_url(); ?>">TOP</a>
-							<a class="l-header-sp__menu--link" href="<?php echo home_url(); ?>/works/">実績紹介</a>
+							<a class="l-header-sp__menu--link" href="<?php echo home_url(); ?>/works/">実例紹介</a>
 							<a class="contact_btn" href="<?php echo home_url(); ?>/contact/">お問い合わせフォーム</a>
 							<a class="freecall_btn" href="tel:0120-380-816">
 								<span class="__ttl"></span>

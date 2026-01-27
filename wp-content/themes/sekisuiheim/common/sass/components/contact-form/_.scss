@@ -13,6 +13,16 @@
 
 	&__main {
 
+		& > .c_ttl {
+			text-align: center;
+			display: block;
+
+			&::before {
+				content: none;
+			}
+
+		}
+
 		&--txt {
 			font-size: clamp(1.6rem, 1.357rem + 0.51vw, 1.8rem);
 			line-height: 1.8;
@@ -29,24 +39,98 @@
 
 		}
 
-		.contact_btn {
-			font-size: 3.2rem;
-			padding: 40px 80px;
-			margin-bottom: 80px;
-			justify-content: space-between;
+		.c-contact-form__option {
+			width: 100%;
+			margin-bottom: 100px;
+			display: flex;
+			gap: 30px;
 
 			@include g.smMax {
+				flex-direction: column;
+			}
+
+			.contact_btn {
 				font-size: 2rem;
-				padding: 20px 20px 20px 30px;
+				width: calc((100% - 30px) / 2);
+				padding: 40px;
+				justify-content: space-between;
+
+				@include g.mdMax {
+					padding: 20px 40px;
+				}
+
+				@include g.smMax {
+					font-size: 1.8rem;
+					width: 100%;
+					padding: 20px 20px 20px 30px;
+				}
+
+				@include g.xsMax {
+					font-size: 1.6rem;
+				}
+
+				&::after {
+					width: 48px;
+					height: 48px;
+				}
+
 			}
 
-			@include g.xsMax {
-				font-size: 1.6rem;
-			}
+			.c-contact-tel {
+				width: calc((100% - 30px) / 2);
+				padding: 40px;
+				margin: 0;
+				flex-direction: column;
+				gap: 10px;
 
-			&::after {
-				width: 48px;
-				height: 48px;
+				@include g.mdMax {
+					padding: 20px 40px;
+				}
+
+				@include g.smMax {
+					width: 100%;
+				}
+
+				.c_ttl {
+					font-size: 2rem;
+					margin: 0;
+
+					@include g.smMax {
+						justify-content: flex-start;
+					}
+
+				}
+
+				.freecall_btn {
+
+					@include g.smMax {
+						flex-direction: column;
+					}
+
+					.__sub {
+						font-size: 4.2rem;
+
+						@include g.mdMax {
+							font-size: 3.6rem;
+						}
+
+						@include g.smMax {
+							font-size: 3rem;
+						}
+
+						&::before {
+							width: 60px;
+
+							@include g.mdMax {
+								width: 50px;
+							}
+
+						}
+
+					}
+
+				}
+
 			}
 
 		}
@@ -112,10 +196,24 @@
 	&__block {
 		margin-bottom: 45px;
 
+		.c-contact-form__subttl {
+			font-size: clamp(1.7rem, 1.578rem + 0.25vw, 1.8rem);
+			color: g.$mainColor01;
+			padding: 5px 10px;
+			margin-bottom: 20px;
+
+			.__red {
+				color: #C70010;
+			}
+
+		}
+
 		.c-contact-form__ttl {
 			font-size: clamp(1.7rem, 1.578rem + 0.25vw, 1.8rem);
 			color: g.$mainColor01;
+			padding: 5px 10px;
 			margin-bottom: 20px;
+			border: 1px solid g.$mainColor01;
 
 			.__red {
 				color: #C70010;

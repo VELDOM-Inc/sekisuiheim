@@ -157,6 +157,11 @@
 
 				&::after {
 					right: 75px;
+
+					@include g.smMax {
+						right: 25px;
+					}
+
 				}
 
 			}

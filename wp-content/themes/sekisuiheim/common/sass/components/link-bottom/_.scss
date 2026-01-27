@@ -148,16 +148,33 @@
 
 			}
 
+			&:hover {
+
+				&::after {
+
+					right: 75px !important;
+
+					@include g.lgMax {
+						right: 45px !important;
+					}
+
+					@include g.mdMax {
+						right: 25px !important;
+					}
+
+					@include g.smMax {
+						right: 20px !important;
+					}
+
+				}
+
+			}
+
 			&.c-link-bottom__list--renovation {
 				border: 3px solid g.$black;
 
 				&:hover {
 					background: g.$subColor03;
-
-					&::after {
-						right: 75px;
-					}
-
 				}
 
 			}

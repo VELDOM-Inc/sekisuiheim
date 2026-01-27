@@ -26,12 +26,12 @@
 	<div class="c-index-catch is-fade">
 		<h1 class="__ttl"><span class="__sub">たくさんの『理想の家』を<br class="u-sm-max">創ってきたセキスイハイムが</span>ご家族の「こうしたい！」<br class="u-sm-max">をカタチにします</h1>
 		<div class="c-index-catch__btn">
-			<a class="contact_btn opacity" href="<?php echo home_url(); ?>/contact/">お問い合わせ<br class="u-lg-min">フォーム</a>
+			<a class="contact_btn opacity" href="<?php echo home_url(); ?>/contact/">お問い合わせ</a>
 			<a class="freecall_btn opacity" href="tel:0120-380-816">
 				<span class="__ttl"></span>
 				<span class="__sub">0120-380-816</span>
 			</a>
-			<a class="contact_btn opacity __works" href="<?php echo home_url(); ?>/works/">実績紹介は<br class="u-lg-min">こちら</a>
+			<a class="contact_btn opacity __works" href="<?php echo home_url(); ?>/works/">実例紹介は<br class="u-lg-min">こちら</a>
 		</div>
 	</div>
 
@@ -42,7 +42,7 @@
 			<div class="c-index-quality__info is-fade">
 				<p class="c-index-quality__info--ttl">
 					<span class="__sub">時を経ても、</span>
-					<span class="__sub">続く価値を</span>
+					<span class="__sub">続く価値を。</span>
 				</p>
 				<p class="c-index-quality__info--txt">セキスイハイムの技術力・ノウハウで、将来まで安心して快適に住み続けられるマンションを実現します</p>
 			</div>
@@ -67,7 +67,7 @@
 	<section class="c-index-renovation">
 		<h2 class="c_ttl is-fade">「まるで新築」<br class="u-sm-max">「住み慣れた街だからいい」<br>マンションまるごと<br class="u-sm-max">リノベーションとは？</h2>
 		<p class="c_txt is-fade">ただ「壁紙を張り替える」<br class="u-sm-max">「設備を交換する」だけではなく、<br>内部をすべて解体し、ゼロからつくる<br class="u-sm-max">「スケルトンリノベーション」</p>
-		<p class="c-index-renovation__catch is-fade">SKELETON <br class="u-sm-max">ENOVATION</p>
+		<p class="c-index-renovation__catch is-fade">スケルトン <br class="u-sm-max">リノベーション</p>
 		<div class="c-index-renovation__flow">
 			<div class="c-index-renovation__flow--item is-fade">
 				<div class="__ttl">BEFORE</div>
@@ -96,8 +96,8 @@
 		</div>
 		<div class="c-index-works__contents">
 			<div class="c-index-works__contents--flex">
-				<div class="__ttl is-fade">実績紹介</div>
-				<a class="c_btn opacity u-sm-min" href="<?php echo home_url(); ?>/works/">実績一覧はコチラ</a>
+				<div class="__ttl is-fade">実例紹介</div>
+				<a class="c_btn opacity u-sm-min" href="<?php echo home_url(); ?>/works/">実例一覧はコチラ</a>
 			</div>
 
 			<div class="c-works-list">
@@ -153,7 +153,7 @@
     			<?php endif; ?>
 
 			</div>
-			<a class="c_btn u-sm-max opacity" href="<?php echo home_url(); ?>/works/">実績一覧はコチラ</a>
+			<a class="c_btn u-sm-max opacity" href="<?php echo home_url(); ?>/works/">実例一覧はコチラ</a>
 		</div>
 	</section>
 
@@ -242,63 +242,58 @@
 			<div class="c-index-flow__item">
 				<div class="__number">01</div>
 				<div class="c-index-flow__ttl">ご相談</div>
-				<p class="c-index-flow__txt">お住まいのお困りごと、ご希望、何でもお気軽にご相談ください。<br>知識・経験豊富なスタッフがアドバイスいたします。<br><a href="<?php echo home_url(); ?>/contact/" class="__link">お問い合わせ</a>はこちらから</p>
 				<div class="c-index-flow__img"><img src="<?php echo get_template_directory_uri(); ?>/common/img/top/pic_flow01.jpg" alt="ご相談" class="__img"></div>
+				<p class="c-index-flow__txt">現在のお困りごとや将来のお住まい方、ご家族それぞれのご要望について、また、スケジュールや費用面でのご希望など、お気軽に私たちに教えてください。</p>
 			</div>
 			<div class="c-index-flow__item">
 				<div class="__number">02</div>
-				<div class="c-index-flow__ttl">住宅診断</div>
-				<p class="c-index-flow__txt">リノベーションを検討されているお住まいの状態、構造、配管などを無料で調査いたします。</p>
-				<div class="c-index-flow__img"><img src="<?php echo get_template_directory_uri(); ?>/common/img/top/pic_flow02.jpg" alt="住宅診断" class="__img"></div>
+				<div class="c-index-flow__ttl">建物調査</div>
+				<div class="c-index-flow__img"><img src="<?php echo get_template_directory_uri(); ?>/common/img/top/pic_flow02.jpg" alt="建物調査" class="__img"></div>
+				<p class="c-index-flow__txt">マンションの建物構造、配管設備、各種劣化状況などを無料で調査いたします。<br>新築時の図面やマンション管理組合の取り決め事項なども、わかれば教えてください。</p>
 			</div>
 			<div class="c-index-flow__item">
 				<div class="__number">03</div>
-				<div class="c-index-flow__ttl">プラン提案</div>
-				<p class="c-index-flow__txt">住宅診断を踏まえてのご希望、ご要望を形にしたプランを提案いたします。<br>現況図・平面図・パース図・ARを提示し、分かりやすさに努めています。</p>
-				<div class="c-index-flow__img"><img src="<?php echo get_template_directory_uri(); ?>/common/img/top/pic_flow03.jpg" alt="プラン提案" class="__img"></div>
+				<div class="c-index-flow__ttl">プランご提案</div>
+				<div class="c-index-flow__img"><img src="<?php echo get_template_directory_uri(); ?>/common/img/top/pic_flow03.jpg" alt="プランご提案" class="__img"></div>
+				<p class="c-index-flow__txt">建物調査をふまえて、お客様のご要望に合ったリノベーションプランをご提案します。<br>内装・設備のセレクトの際は、ショールームへのご案内もいたします。</p>
 			</div>
 			<div class="c-index-flow__item">
 				<div class="__number">04</div>
 				<div class="c-index-flow__ttl">お見積り</div>
-				<p class="c-index-flow__txt">お客様とのお打合せで完成した、ご希望が実現するプランでお見積りを提示します。<br>工事内容、工事費用を丁寧にご説明いたします。
-				<span class="__sub">工事の範囲や、工事内容、設備仕様などしっかりご確認ください。<br>ショールームへのご案内もいたします。</span>
-				</p>
 				<div class="c-index-flow__img"><img src="<?php echo get_template_directory_uri(); ?>/common/img/top/pic_flow04.jpg" alt="お見積り" class="__img"></div>
+				<p class="c-index-flow__txt">ご希望のプランでのお見積りをご説明いたします。<br>工事内容や範囲、設備仕様など、しっかりご確認ください。<br>ローンをつかった資金計画もご提案いたします。</span>
+				</p>
 			</div>
 			<div class="c-index-flow__item">
 				<div class="__number">05</div>
 				<div class="c-index-flow__ttl">ご契約</div>
-				<p class="c-index-flow__txt">図面・仕様書・打合せ工事スケジュール・ 御見積書・資金計画をご確認いただき、ご契約となります。<br>
-				<span class="__sub">ローンをお考えのお客様には、ご契約の前にローンの審査をお願いしています。</span><br>
-				<span class="__sub">リフォームのローンについて、提携の信販会社によるリフォームローン、住宅ローン残債がお有りの方のローン計画立案などのご相談を承っています。</span>
-				</p>
 				<div class="c-index-flow__img"><img src="<?php echo get_template_directory_uri(); ?>/common/img/top/pic_flow05.jpg" alt="ご契約" class="__img"></div>
+				<p class="c-index-flow__txt">図面・仕様書・工事スケジュール・ 御見積書をご確認いただき、ご契約を締結します。<br>ローンをお考えのお客様には、ご契約の前にローンの審査をお願いしています。</span>
+				</p>
 			</div>
 			<div class="c-index-flow__item">
 				<div class="__number">06</div>
-				<div class="c-index-flow__ttl">最終打合せ</div>
-				<p class="c-index-flow__txt">図面・仕様書・工程表・御見積書の工事前最終確認です。</p>
-				<div class="c-index-flow__img"><img src="<?php echo get_template_directory_uri(); ?>/common/img/top/pic_flow06.jpg" alt="最終打合せ" class="__img"></div>
+				<div class="c-index-flow__ttl">最終仕様確認</div>
+				<div class="c-index-flow__img"><img src="<?php echo get_template_directory_uri(); ?>/common/img/top/pic_flow06.jpg" alt="最終仕様確認" class="__img"></div>
+				<p class="c-index-flow__txt">設備の品番や内装仕様、色など、詳細な仕様について最終的にご確認いただきます。<br>内容をご承認いただけましたら、着工に向け部材の発注を進めます。</p>
 			</div>
 			<div class="c-index-flow__item">
 				<div class="__number">07</div>
 				<div class="c-index-flow__ttl">着工・施工</div>
-				<p class="c-index-flow__txt">着工前にご近所へご挨拶を行います。<br>ご近所への配慮、安全のために養生をしっかり実施し、迅速、丁寧に工事を進めます。<br>
-				<span class="__sub">追加・変更が生じた場合は図面にて追加変更内容を確認し、正確に進めます。</span>
-				</p>
 				<div class="c-index-flow__img"><img src="<?php echo get_template_directory_uri(); ?>/common/img/top/pic_flow07.jpg" alt="着工・施工" class="__img"></div>
+				<p class="c-index-flow__txt">着工前にマンション管理組合、ご住民の皆さんへ工事スケジュールをご案内します。<br>工事中はご迷惑をお掛けしますが、安全第一で進めてまいります。</span></p>
 			</div>
 			<div class="c-index-flow__item">
 				<div class="__number">08</div>
-				<div class="c-index-flow__ttl">完成・引渡</div>
-				<p class="c-index-flow__txt">セキスイにて工事完了の検査を実施し、その後お客様と完成確認をいたします。</p>
-				<div class="c-index-flow__img"><img src="<?php echo get_template_directory_uri(); ?>/common/img/top/pic_flow08.jpg" alt="完成・引渡" class="__img"></div>
+				<div class="c-index-flow__ttl">完工・お引渡し</div>
+				<div class="c-index-flow__img"><img src="<?php echo get_template_directory_uri(); ?>/common/img/top/pic_flow08.jpg" alt="完工・お引渡し" class="__img"></div>
+				<p class="c-index-flow__txt">当社内で実施する完工検査に合格したら、お客様にも仕上がりをご確認いただき、お引渡しとなります。<br>設備の使い方やお手入れ方法などもご案内いたします。</p>
 			</div>
 			<div class="c-index-flow__item">
 				<div class="__number en">AFTER<br>SERVICE</div>
 				<div class="c-index-flow__ttl">アフターサービス</div>
-				<p class="c-index-flow__txt">工事図面をセキスイのデータベースに登録し、お客様の情報を保管、実施したリフォーム工事の問合せやご相談に対応いたします。</p>
 				<div class="c-index-flow__img"><img src="<?php echo get_template_directory_uri(); ?>/common/img/top/pic_flow09.jpg" alt="アフターサービス" class="__img"></div>
+				<p class="c-index-flow__txt">図面や部材の品番など、工事内容を当社のデータベースに保管し、その後のメンテナンスに活かします。<br>不具合・お困りごとがあれば、お客様センターへご相談ください。</p>
 			</div>
 		</div>
 		<div class="custom-scrollbar">

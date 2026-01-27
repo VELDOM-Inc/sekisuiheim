@@ -1,16 +1,15 @@
 <?php get_header(); ?>
 
     <div class="c-mv">
-		<h1 class="c_ttl is-fade" data-en="WORKS">実績紹介</h1>
+		<h1 class="c_ttl is-fade" data-en="WORKS">実例紹介</h1>
 	</div>
 
 	<div class="c-works">
 
-		<p class="__catch is-fade">ゼロからつくる<br>「スケルトンリノベーション」<br class="u-sm-max">の実績を紹介します。</p>
+		<p class="__catch is-fade">ゼロからつくる<br>「スケルトンリノベーション」<br class="u-sm-max">の実例を紹介します。</p>
 		<div class="c-works-category">
-			<div class="c-works-category__list is-fade">	
-				<!-- すべて -->
-				<a class="c-works-category__link category-all" href="<?php echo home_url(); ?>/works/">すべて</a>
+			<!-- すべて 
+				<a class="c-works-category__link category-all<?php if( is_post_type_archive('works') || is_tax('works_category') ) echo ' __current'; ?>" href="<?php echo get_post_type_archive_link('works'); ?>">すべて</a>
 				<?php
     				$terms = get_terms( array(
       					'taxonomy'   => 'works_category',
@@ -27,8 +26,10 @@
 					<?php echo esc_html($term->name); ?>
 				</a>
 				<?php endforeach; endif; ?>
+			-->
 
-			</div>
+			<a class="c_btn opacity" href="https://www.sekisui-famis.com/mansion/index.html#case01" target="_blank">全国の実例</a>
+
 		</div>
 
 		<div class="c-works-list">

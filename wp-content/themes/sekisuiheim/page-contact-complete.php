@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
     <div class="c-mv">
-		<h1 class="c_ttl" data-en="CONTACT">お問い合わせ</h1>
+		<h1 class="c_ttl contact_ttl" data-en="">ファミエス九州<br>マンションデザインOffice<br class="u-sm-max">お問い合わせ</h1>
 	</div>
 
 	<section class="c-contact-complete">
@@ -17,7 +17,7 @@
 		</div>
 
 		<p class="c-contact-complete__ttl">送信完了しました</p>
-		<p class="c-contact-complete__txt">お問い合わせいただき<br class="u-sm-max">ありがとうございます。<br>3営業日以内に担当者より<br class="u-sm-max">ご連絡させていただきます。</p>
+		<p class="c-contact-complete__txt">お問い合わせいただき<br class="u-sm-max">ありがとうございます。<br>後日、担当者より<br class="u-sm-max">ご連絡させていただきます。</p>
 		<a href="<?php echo home_url(); ?>" class="c-contact-complete__btn">TOPへ戻る</a>
 
     </section>

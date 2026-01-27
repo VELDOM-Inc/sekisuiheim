@@ -19,13 +19,13 @@
 				<section class="c-contact-bottom__inner">
 					<h2 class="c_ttl" data-en="CONTACT">お問い合わせ</h2>
 					<p class="c-contact-bottom__catch">
-						<span class="__sub">九州エリアで<br class="u-sm-max">マンションリフォームのご相談受付中</span>
+						<span class="__sub">福岡県、熊本県エリアの<br class="u-sm-max">マンションリフォーム ご相談受付中</span>
 					</p>
 					<div class="c-contact-bottom__btn">
 						<a class="c-contact-bottom__btn--form" href="<?php echo home_url(); ?>/contact/">
 							<span class="__catch">お問い合わせフォーム</span>
 							<span class="__logo"><img src="<?php echo get_template_directory_uri(); ?>/common/img/common/logo_txt.svg" alt="ファミエス九州" class="__img"></span>
-							<span class="__info">マンションデザインofficeへ</span>
+							<span class="__info">マンションデザインOfficeへ</span>
 						</a>
 						<a class="freecall_btn" href="tel:0120-380-816">
 							<span class="__ttl"></span>
@@ -44,7 +44,7 @@
 					<div class="l-footer-left">
 						<div class="l-footer-left__top">
 							<a class="ol_link opacity" href="<?php echo home_url(); ?>">TOP</a>
-							<a class="ol_link opacity" href="<?php echo home_url(); ?>/works/">実績紹介</a>
+							<a class="ol_link opacity" href="<?php echo home_url(); ?>/works/">実例紹介</a>
 							<a class="ol_link opacity" href="<?php echo home_url(); ?>/contact/">お問い合わせ</a>
 						</div>
 						<div class="l-footer-left__bottom">
@@ -55,7 +55,7 @@
 						</div>
 					</div>
 					<div class="l-footer-right">
-						<div class="l-footer-right__logo"><img src="<?php echo get_template_directory_uri(); ?>/common/img/common/logo-bottom.svg" alt="セキスイファミエス九州株式会社" class="__img"></div>
+						<div class="l-footer-right__logo"><a href="https://www.sekisuiheim-owner.jp/kyushu/" target="_blank" class="__link"><img src="<?php echo get_template_directory_uri(); ?>/common/img/common/logo-bottom.svg" alt="セキスイファミエス九州株式会社" class="__img"></a></div>
 						<div class="l-footer-right__copyright">
 							<small>Copyright &copy; セキスイファミエス九州株式会社 <br class="u-sm-max">All Rights Reserved.</small>
 						</div>

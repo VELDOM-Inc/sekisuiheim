@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 	<div class="c-mv">
-		<h1 class="c_ttl is-fade" data-en="WORKS">実績紹介</h1>
+		<h1 class="c_ttl is-fade" data-en="WORKS">実例紹介</h1>
 	</div>
 
 	<div class="c-works-detail">
@@ -81,7 +81,7 @@
 			</section>
 		</section>
 
-		<a class="c-works-detail__return" href="<?php echo home_url(); ?>/works/">実績一覧に戻る</a>
+		<a class="c-works-detail__return" href="<?php echo home_url(); ?>/works/">実例一覧に戻る</a>
 
 	</div>
 
