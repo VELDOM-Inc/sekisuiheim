@@ -1194,12 +1194,14 @@ input[type=submit] {
 .c-contact-form__block .c-contact-form__subttl .__red {
   color: #C70010;
 }
+.c-contact-form__block .c-contact-form__border {
+  border: 1px solid #633126;
+}
 .c-contact-form__block .c-contact-form__ttl {
   font-size: clamp(1.7rem, 1.578rem + 0.25vw, 1.8rem);
   color: #633126;
   padding: 5px 10px;
   margin-bottom: 20px;
-  border: 1px solid #633126;
 }
 .c-contact-form__block .c-contact-form__ttl .__red {
   color: #C70010;
@@ -1394,7 +1396,6 @@ input[type=submit] {
   background: transparent;
   border: 1px solid #42250F;
   border-radius: 100px;
-  cursor: pointer;
   transition: all 0.3s;
 }
 .c-contact-form .c-contact-form__btn::after {
