@@ -1,6 +1,7 @@
 $(function(){
   var head = $('header');
   var returnbtn = $('.return');
+  var floating = $('.c-floating-menu');
   $(window).on('scroll', function(){
     var el = $(this).scrollTop();
     var winHeight = $(window).height() - 100;
@@ -9,10 +10,12 @@ $(function(){
       if(!head.hasClass('header_fix')){
         head.addClass('header_fix');
         returnbtn.addClass('show');
+        floating.addClass('show');
       }
     } else {
       head.removeClass('header_fix');
       returnbtn.removeClass('show');
+      floating.removeClass('show');
     }
   });
 });  

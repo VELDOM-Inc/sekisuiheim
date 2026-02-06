@@ -10,6 +10,10 @@
 							<span class="__ttl">セキスイハイム戸建て住宅<br>オーナー様のリフォーム実例</span>
 							<span class="__logo"><img src="<?php echo get_template_directory_uri(); ?>/common/img/common/pic_owner-support.png" alt="オーナーサポート" class="__img"></span>
 						</a>
+						<a href="https://www.sekisuiheim-owner.jp/" class="c-link-bottom__list--btn c-link-bottom__list--buysell" target="__blank">
+							<span class="__ttl">中古マンション購入<br>ご自宅売却のご相談</span>
+							<span class="__logo"><img src="<?php echo get_template_directory_uri(); ?>/common/img/common/pic_fudosan.svg" alt="九州セキスイハイム不動産" class="__img"></span>
+						</a>
 					</div>
 				</section>
 			</div>
@@ -36,6 +40,17 @@
 			</div>
 			<?php endif; ?>
 
+			<div class="c-floating-menu">
+				<ul class="c-floating-menu__list">
+					<li class="c-floating-menu__item works_nav">
+						<a class="__link" href="<?php echo home_url(); ?>/works/">実例紹介</a>
+					</li>
+					<li class="c-floating-menu__item contact_nav">
+						<a class="__link" href="<?php echo home_url(); ?>/contact/">お問い合わせ</a>
+					</li>
+				</ul>
+			</div>
+
 		</main>
 
 			<!-- .l-footer -->
@@ -43,7 +58,7 @@
 				<div class="l-footer__inner">
 					<div class="l-footer-left">
 						<div class="l-footer-left__top">
-							<a class="ol_link opacity" href="<?php echo home_url(); ?>">TOP</a>
+							<!--<a class="ol_link opacity" href="<?php echo home_url(); ?>">TOP</a>-->
 							<a class="ol_link opacity" href="<?php echo home_url(); ?>/works/">実例紹介</a>
 							<a class="ol_link opacity" href="<?php echo home_url(); ?>/contact/">お問い合わせ</a>
 						</div>

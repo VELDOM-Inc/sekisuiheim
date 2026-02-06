@@ -13,14 +13,42 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	gap: 15px;
+
+	&::before {
+		content: "";
+		width: 46px;
+		aspect-ratio: 46/34;
+		margin-right: 8px;
+		background: url(../img/common/ico_mail.svg) no-repeat center / 100%;
+
+		@include g.lgMax {
+			width: 32px;
+		}
+
+	}
 
 	&::after {
 		content: "";
 		width: 32px;
 		height: 32px;
+		margin-left: 16px;
 		border-radius: 30px;
 		background: g.$white url(../img/common/ico_arrow-blue.svg) no-repeat center / 12px;
+	}
+
+	&.__works {
+
+		&::before {
+			width: 43px;
+			aspect-ratio: 43/42;
+			background: url(../img/common/ico_works.svg) no-repeat center / 100%;
+
+			@include g.lgMax {
+				width: 29px;
+			}
+
+		}
+
 	}
 
 }
@@ -51,13 +79,18 @@
 		display: flex;
 		align-items: center;
 		justify-content: flex-start;
-		gap: 3px;
+		gap: 8px;
 
 		&::before {
 			content: "";
-			width: 37px;
-			aspect-ratio: 37/29;
-			background: url(../img/common/pic_freecall.svg) no-repeat center / 100%;
+			width: 28px;
+			aspect-ratio: 28/42;
+			background: url(../img/common/ico_tel.svg) no-repeat center / 100%;
+
+			@include g.lgMax {
+				width: 19px;
+			}
+
 		}
 
 	}
@@ -98,6 +131,81 @@
 		height: 5px;
 		border-radius: 5px;
 		background: g.$mainColor02;
+	}
+
+}
+
+.c-floating-menu {
+	width: 100%;
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.3s;
+	display: none;
+
+	&.show {
+		opacity: 1;
+		visibility: visible;
+	}
+
+	@include g.smMax {
+		display: block;
+	}
+
+	&__list {
+		display: flex;
+		align-items: center;
+
+		.c-floating-menu__item {
+			width: 50%;
+			
+			.__link {
+				@include g.font-mincho;
+				font-size: 1.7rem;
+				line-height: 1;
+				color: g.$white;
+				border: 2px solid g.$mainColor02;
+				background: rgba(38, 14, 9, 0);
+				background: linear-gradient(129deg,rgba(88, 59, 53, 1) 0%, rgba(66, 37, 15, 1) 68%);
+				padding: 15px 0;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				gap: 15px;
+
+				&::after {
+					content: "";
+					width: 32px;
+					height: 32px;
+					border-radius: 30px;
+					background: g.$white url(../img/common/ico_arrow-brown.svg) no-repeat center / 12px;
+				}
+
+			}
+
+			&.contact_nav {
+
+				.__link {
+					background: g.$subColor05;
+					background: linear-gradient(90deg, rgba(149, 201, 238, 1) 0%, rgba(3, 110, 184, 1) 84%);
+					border: 2px solid g.$subColor05;
+
+					&::after {
+						content: "";
+						width: 32px;
+						height: 32px;
+						border-radius: 30px;
+						background: g.$white url(../img/common/ico_arrow-blue.svg) no-repeat center / 12px;
+					}
+
+				}
+
+			}
+
+		}
+
 	}
 
 }

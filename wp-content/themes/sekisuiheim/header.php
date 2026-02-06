@@ -37,13 +37,13 @@
 						</div>
 						<nav class="l-gnav__inner">
 							<ul class="l-gnav__list">
-								<li class="l-gnav__item">
+								<!--<li class="l-gnav__item">
 									<a class="ol_link opacity" href="<?php echo home_url(); ?>">TOP</a>
-								</li>
-								<li class="l-gnav__item">
+								</li>-->
+								<li class="l-gnav__item works_nav">
 									<a class="ol_link opacity" href="<?php echo home_url(); ?>/works/">実例紹介</a>
 								</li>
-								<li class="l-gnav__item">
+								<li class="l-gnav__item contact_nav">
 									<a class="ol_link opacity" href="<?php echo home_url(); ?>/contact/">お問い合わせ</a>
 								</li>
 							</ul>
@@ -56,13 +56,14 @@
 							<span class="__sub"></span>
 						</div>
 						<div class="l-header-sp__menu">
-							<a class="l-header-sp__menu--link" href="<?php echo home_url(); ?>">TOP</a>
-							<a class="l-header-sp__menu--link" href="<?php echo home_url(); ?>/works/">実例紹介</a>
+							<!--<a class="l-header-sp__menu--link" href="<?php echo home_url(); ?>">TOP</a>
+							<a class="l-header-sp__menu--link" href="<?php echo home_url(); ?>/works/">実例紹介</a>-->
 							<a class="contact_btn" href="<?php echo home_url(); ?>/contact/">お問い合わせフォーム</a>
 							<a class="freecall_btn" href="tel:0120-380-816">
 								<span class="__ttl"></span>
 								<span class="__sub">0120-380-816</span>
 							</a>
+							<a class="contact_btn opacity __works" href="<?php echo home_url(); ?>/works/">実例紹介は<br class="u-lg-min">こちら</a>
 							<div class="l-header-sp__submenu">
 								<a class="link_blank" href="https://www.sekisuiheim-owner.jp/kyushu/company/" target="_blank">会社概要</a>
 								<a class="link_blank" href="https://www.sekisui.co.jp/privacy_policy/common/" target="_blank">サイトのご利用について</a>

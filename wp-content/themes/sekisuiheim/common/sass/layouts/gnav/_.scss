@@ -77,7 +77,56 @@
 	&__list {
 		display: flex;
 		align-items: center;
-		gap: 30px;
+
+		.l-gnav__item {
+
+			.ol_link {
+				width: 152px;
+				padding: 6px 10px;
+				color: g.$white;
+				justify-content: space-between;
+
+				&::before {
+					content: none;
+				}
+
+				&::after {
+					content: "";
+    				width: 24px;
+    				height: 24px;
+    				border-radius: 25px;
+    				background: g.$white url(../img/common/ico_arrow-blue.svg) no-repeat center / 12px;
+				}
+
+			}
+
+			&.works_nav {
+
+				.ol_link {
+					border: 2px solid g.$subColor04;
+    				background: rgba(38, 14, 9, 0);
+    				background: linear-gradient(129deg, rgba(38, 14, 9, 0.5) 0%, rgb(66, 37, 15) 68%);
+
+					&::after {
+    					background: g.$white url(../img/common/ico_arrow-brown.svg) no-repeat center / 12px;
+					}
+
+				}
+
+			}
+
+			&.contact_nav {
+
+				.ol_link {
+					background: g.$subColor05;
+    				background: linear-gradient(90deg, rgb(149, 201, 238) 0%, rgb(3, 110, 184) 84%);
+    				border: 2px solid g.$subColor05;
+				}
+
+			}
+
+		}
+
 	}
 	
 }

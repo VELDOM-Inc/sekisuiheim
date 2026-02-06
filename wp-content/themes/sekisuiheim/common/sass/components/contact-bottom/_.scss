@@ -198,12 +198,10 @@
 				}
 
 				&::before {
-					width: 71px;
-					aspect-ratio: 71/56;
-					background: url(../img/common/pic_freecall-contact.svg) no-repeat center / 100%;
+					width: 37px;
 
 					@include g.smMax {
-						width: 45px;
+						width: 24px;
 					}
 
 				}
