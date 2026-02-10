@@ -11,8 +11,7 @@
 		border: 3px solid g.$mainColor02;
 		border-radius: 200px;
 		display: flex;
-		justify-content: space-between;
-		gap: 45px;
+		justify-content: center;
 
 		@include g.mdMax {
 			padding: 30px 80px;
@@ -23,7 +22,6 @@
 			margin: 0 auto 50px;
 			border: 2px solid g.$mainColor02;
 			flex-direction: column;
-			gap: 15px;
 		}
 
 		@include g.xsMax {

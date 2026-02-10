@@ -7,7 +7,25 @@
 	<div class="c-works-detail">
 		<section class="c-works-detail__item">
 			<div class="c-works-detail__info is-fade">
-				<div class="c-works-detail__time"><time datetime="<?php echo get_the_date('Y-m-d'); ?>"><?php echo get_the_date('Y.m.d'); ?></time></div>
+				<?php
+				$current_date = get_the_date('Y-m-d H:i:s');
+				$counter_query = new WP_Query(array(
+					'post_type' => 'works',
+					'post_status' => 'publish',
+					'orderby' => 'date',
+					'order' => 'DESC',
+					'date_query' => array(
+						array(
+							'after' => $current_date,
+							'inclusive' => false,
+						),
+					),
+					'fields' => 'ids',
+					'posts_per_page' => -1,
+				));
+				$position = count($counter_query->posts) + 1;
+				printf('<div class="c-works-detail__time">%03d</div>', $position);
+				?>
 
 				<!-- termsループ -->
 				<?php

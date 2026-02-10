@@ -23,6 +23,19 @@
 
 		}
 
+		.c_catch {
+			font-size: clamp(1.6rem, 1.357rem + 0.51vw, 1.8rem);
+			text-align: center;
+			margin-bottom: 30px;
+		}
+
+		.c_txt {
+			font-size: 1.4rem;
+			margin-bottom: 10px;
+			text-align: center;
+			color: g.$red;
+		}
+
 		&--txt {
 			font-size: clamp(1.6rem, 1.357rem + 0.51vw, 1.8rem);
 			line-height: 1.8;
@@ -67,6 +80,7 @@
 
 				@include g.xsMax {
 					font-size: 1.6rem;
+					padding: 29px 30px;
 				}
 
 				&::after {

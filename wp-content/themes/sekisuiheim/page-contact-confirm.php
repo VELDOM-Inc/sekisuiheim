@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
     <div class="c-mv">
-		<h1 class="c_ttl contact_ttl" data-en="">ファミエス九州<br>マンションデザインOffice<br class="u-sm-max">お問い合わせ</h1>
+		<h1 class="c_ttl contact_ttl" data-en="">マンションまるごと<br>リノベーション<br class="u-sm-max">ご相談フォーム</h1>
 	</div>
 
 	<section class="c-contact __confirm">

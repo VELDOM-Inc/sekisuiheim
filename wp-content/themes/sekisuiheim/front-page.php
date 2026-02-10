@@ -26,7 +26,7 @@
 	<div class="c-index-catch is-fade">
 		<h1 class="__ttl"><span class="__sub">たくさんの『理想の家』を<br class="u-sm-max">創ってきたセキスイハイムが</span>ご家族の「こうしたい！」<br class="u-sm-max">をカタチにします</h1>
 		<div class="c-index-catch__btn">
-			<a class="contact_btn opacity" href="<?php echo home_url(); ?>/contact/">お問い合わせ</a>
+			<a class="contact_btn opacity" href="<?php echo home_url(); ?>/contact/">お問い合わせフォーム</a>
 			<a class="freecall_btn opacity" href="tel:0120-380-816">
 				<span class="__ttl"></span>
 				<span class="__sub">0120-380-816</span>
@@ -61,7 +61,7 @@
 				</div>
 			</div>
 		</div>
-		<a class="c_btn opacity" href="">セキスイファミエス九州が<br>選ばれる理由</a>
+		<a class="c_btn opacity" href="#strength">セキスイファミエス九州が<br>選ばれる理由</a>
 	</section>
 
 	<section class="c-index-renovation">
@@ -112,6 +112,13 @@
         			'paged' => $paged,
       			);
       			$the_query = new WP_Query($args);
+
+				$total = $the_query->found_posts;
+				$per_page = $args['posts_per_page'];
+				$offset = ($paged - 1) * $per_page;
+				$start_number = $total - $offset;
+				$counter = $start_number;
+
                 if ($the_query->have_posts()) : while ($the_query->have_posts()) : $the_query->the_post();
     			?>
 
@@ -127,7 +134,7 @@
 						</div>
 
 						<div class="c-works-list__info">
-							<div class="c-works-list__day"><time datetime="<?php the_time('Y-m-d');?>"><?php the_time('Y.m.d');?></time></div>
+							<div class="c-works-list__day"><?php printf('%03d', $counter); ?></div>
 							<div class="c-works-list__category <?php
 							$terms = get_the_terms(get_the_ID(), 'works_category');
 							if ($terms && !is_wp_error($terms)) {
@@ -146,9 +153,12 @@
 						</div>
 					</a>
 				</div>
-				<?php endwhile; ?>
-					<?php wp_reset_postdata(); ?>
-    			<?php else: ?>
+				<?php
+				$counter--;
+				endwhile;
+				wp_reset_postdata();
+				else:
+				?>
 					<p class="c-works-list__txt">現在準備中です</p>
     			<?php endif; ?>
 
@@ -180,7 +190,7 @@
 		</div>
 	</section>
 
-	<section class="c-index-strength __bg">
+	<section class="c-index-strength __bg" id="strength">
 		<h2 class="c_ttl is-fade" data-en="STRENGTH">セキスイファミエス九州が<br class="u-sm-max">選ばれる理由</h2>
 		<p class="c-index-strength__catch is-fade">私たちセキスイハイムグループは、<br class="u-sm-max">「時を経ても、続く価値を。」という<br class="u-sm-max">スローガンのもと、<br class="u-sm-min">「地球環境にやさしく、<br class="u-sm-max">60年以上安心して快適に住み続けることの<br class="u-sm-max">できる住まい」を数多く提供してきました。<br>そのノウハウをマンションリノベーションにも<br class="u-sm-max">活かし、ご家族の「こうしたい！」を<br class="u-sm-max">カタチにします。</p>
 		<div class="c-index-strength__list">
@@ -191,11 +201,11 @@
 					<ul class="c-index-strength__detail">
 						<li class="c-index-strength__detail--list">
 							<p class="__ttl">6万棟を超える戸建て注文住宅の新築</p>
-							<p class="__txt">それぞれのご家族のこだわりを追究し、多数の住宅を<br>提供してきた設計・デザイン力をマンションにも活かします</p>
+							<p class="__txt">それぞれのご家族のこだわりを追究し、多数の住宅を提供してきた設計・デザイン力をマンションにも活かします</p>
 						</li>
 						<li class="c-index-strength__detail--list">
 							<p class="__ttl">ご入居後、多数のリフォーム実績</p>
-							<p class="__txt">長くお住まいいただくために、変化する家族構成・<br>ライフスタイルに合わせて、リフォームを提供してきました</p>
+							<p class="__txt">長くお住まいいただくために、変化する家族構成・ライフスタイルに合わせて、リフォームを提供してきました</p>
 						</li>
 					</ul>
 				</div>
@@ -207,11 +217,11 @@
 					<ul class="c-index-strength__detail">
 						<li class="c-index-strength__detail--list">
 							<p class="__ttl">工事前の徹底した現地調査</p>
-							<p class="__txt">工事個所だけではなく、目には見えない問題箇所が<br>潜んでいないか、住まい全体をしっかり調査いたします</p>
+							<p class="__txt">工事個所だけではなく、目には見えない問題箇所が潜んでいないか、住まい全体をしっかり調査いたします</p>
 						</li>
 						<li class="c-index-strength__detail--list">
 							<p class="__ttl">高耐久・高性能部材の採用</p>
-							<p class="__txt">末永く安心・快適にお暮らしいただくために、<br>できるだけメンテナンスのかからない部材を採用し、<br>断熱性能UPなどもご提案します</p>
+							<p class="__txt">末永く安心・快適にお暮らしいただくために、できるだけメンテナンスのかからない部材を採用し、断熱性能UPなどもご提案します</p>
 						</li>
 					</ul>
 				</div>
@@ -224,11 +234,11 @@
 					<ul class="c-index-strength__detail">
 						<li class="c-index-strength__detail--list">
 							<p class="__ttl">365日対応のお客様センター</p>
-							<p class="__txt">お客様の安心で快適な暮らしを支えるため、<br>住まいに関する各種質問や、緊急のトラブルにご対応いたします</p>
+							<p class="__txt">お客様の安心で快適な暮らしを支えるため、住まいに関する各種質問や、緊急のトラブルにご対応いたします</p>
 						</li>
 						<li class="c-index-strength__detail--list">
 							<p class="__ttl">工事履歴の長期保管</p>
-							<p class="__txt">施工内容を病院のカルテのように記録・保管することで、<br>将来のメンテナンスに活かします</p>
+							<p class="__txt">施工内容を病院のカルテのように記録・保管することで、将来のメンテナンスに活かします</p>
 						</li>
 					</ul>
 				</div>
@@ -238,6 +248,7 @@
 
 	<section class="c-index-flow">
 		<h2 class="c_ttl" data-en="FLOW">リノベーションの流れ</h2>
+		<div class="scroll_anker">スクロールできます</div>
 		<div class="c-index-flow__list is-fade">
 			<div class="c-index-flow__item">
 				<div class="__number">01</div>

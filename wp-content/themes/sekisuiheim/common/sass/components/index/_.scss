@@ -85,10 +85,13 @@
 			gap: 30px;
 		}
 
+		@include g.xsMax {
+			font-size: 2.6rem;
+		}
+
 		.__sub {
 			font-size: clamp(1.8rem, -0.873rem + 5.57vw, 4rem);
 			line-height: 1.5;
-			color: g.$black;
 
 			@include g.lgMax {
 				font-size: 3.2rem;
@@ -130,6 +133,10 @@
 				align-items: center;
 			}
 
+			@include g.xsMax {
+				padding: 13px 30px;
+			}
+
 			.__ttl {
 				width: 129px;
 				margin: 0 0 10px;
@@ -164,7 +171,7 @@
 			font-size: 2.8rem;
 			text-align: center;
 			line-height: 1.35;
-			padding: 40px 70px;
+			padding: 40px;
 
 			@media screen and (max-width:1450px) {
 				font-size: 2.2rem;
@@ -180,7 +187,8 @@
 			}
 
 			@include g.xsMax {
-				font-size: 1.8rem;
+				font-size: 1.6rem;
+				padding: 29px 30px;
 			}
 
 			&.__works {
@@ -561,7 +569,7 @@
 				background: url(../img/common/ico_flow.svg) no-repeat center / 100%;
 				position: absolute;
 				right: -67px;
-				top: 80px;
+				top: 70px;
 				bottom: 0;
 
 				@include g.smMax {
@@ -859,7 +867,7 @@
 		@include g.font-mincho;
 		font-size: clamp(1.8rem, 0.099rem + 3.54vw, 3.2rem);
 		text-align: center;
-		color: g.$text-black;
+		color: g.$mainColor02;
 		border-bottom: 1px dotted g.$black;
 		padding-bottom: 60px;
 		margin-bottom: 80px;
@@ -1282,6 +1290,25 @@
 
 		&::before {
 			line-height: 1;
+		}
+
+	}
+
+	.scroll_anker {
+		font-size: 1.6rem;
+    	font-weight: 500;
+    	line-height: 1;
+    	margin-bottom: 30px;
+		display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+
+		&::after {
+			content: "";
+    		width: 12px;
+    		background: url(../img/common/ico_arrow-brown.svg) no-repeat center / 100%;
+    		aspect-ratio: 12 / 8;
 		}
 
 	}

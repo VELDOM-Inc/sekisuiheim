@@ -29,8 +29,6 @@
 				<?php endforeach; endif; ?>
 				-->
 
-				<a class="c_btn opacity" href="https://www.sekisui-famis.com/mansion/index.html#case01" target="_blank">全国の実例</a>
-
 			</div>
 		</div>
 
@@ -46,6 +44,12 @@
         			'paged' => $paged,
       			);
       			$the_query = new WP_Query($args);
+
+				$total = $the_query->found_posts;
+				$per_page = $args['posts_per_page'];
+				$offset = ($paged - 1) * $per_page;
+				$counter = $total - $offset;
+
                 if ($the_query->have_posts()) : while ($the_query->have_posts()) : $the_query->the_post();
     		?>
 
@@ -61,7 +65,7 @@
 					</div>
 
 					<div class="c-works-list__info">
-						<div class="c-works-list__day"><time datetime="<?php the_time('Y-m-d');?>"><?php the_time('Y.m.d');?></time></div>
+						<div class="c-works-list__day"><?php printf('%03d', $counter); ?></div>
 						<div class="c-works-list__category <?php
 						$terms = get_the_terms(get_the_ID(), 'works_category');
 						if ($terms && !is_wp_error($terms)) {
@@ -80,9 +84,12 @@
 					</div>
 				</a>
 			</div>
-			<?php endwhile; ?>
-			<?php wp_reset_postdata(); ?>
-    		<?php else: ?>
+			<?php
+			$counter--;
+			endwhile;
+			wp_reset_postdata();
+			else:
+			?>
 				<p class="c-works-list__txt">現在準備中です</p>
     		<?php endif; ?>
 
@@ -146,6 +153,9 @@
 				?>
 			</div>
     	</div>
+
+		<a class="c_btn opacity" href="https://www.sekisui-famis.com/mansion/index.html#case01" target="_blank">全国の実例</a>
+
 	</div>		
 
 	<?php get_footer(); ?>

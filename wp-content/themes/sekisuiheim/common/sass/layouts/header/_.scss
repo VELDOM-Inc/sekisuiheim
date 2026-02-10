@@ -115,6 +115,10 @@
 			visibility: hidden;
 			transition: all 0.3s;
 
+			@include g.smMax {
+				gap: 15px;
+			}
+
 			&--link {
 				@include g.font-mincho;
 				font-size: 2rem;
@@ -139,6 +143,11 @@
 				width: 90%;
 				margin: 0 auto;
 
+				@include g.xsMax {
+					font-size: 1.6rem;
+					padding: 29px 30px;
+				}
+
 				&.__works {
 					text-align: left;
 					border-color: g.$mainColor02;
@@ -156,6 +165,11 @@
 			.freecall_btn {
 				width: 90%;
 				margin: 0 auto;
+
+				@include g.xsMax {
+					padding: 13px 30px;
+				}
+
 			}
 
 			.l-header-sp__submenu {
