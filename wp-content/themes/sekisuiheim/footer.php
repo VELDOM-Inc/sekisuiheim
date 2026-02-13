@@ -2,15 +2,15 @@
 				<section class="c-link-bottom__inner is-fade">
 					<h2 class="c-link-bottom__ttl">たくさんの『理想の家』を<br class="u-sm-max">創ってきたセキスイハイムが、<br>ご家族の「こうしたい！」を<br class="u-sm-max">カタチにします</h2>
 					<div class="c-link-bottom__list">
-						<a href="https://www.sekifu.co.jp/company/group/" class="c-link-bottom__list--btn c-link-bottom__list--renovation" target="__blank">
+						<a href="https://www.sekisui-famis.com/mansion/" class="c-link-bottom__list--btn c-link-bottom__list--renovation" target="__blank">
 							<span class="__ttl">セキスイハイムグループ<br>全国のマンションリフォーム</span>
 							<span class="__logo"><img src="<?php echo get_template_directory_uri(); ?>/common/img/common/pic_renovationheim.png" alt="リノベーションハイム" class="__img"></span>
 						</a>
-						<a href="https://www.sekisuiheim-owner.jp/" class="c-link-bottom__list--btn c-link-bottom__list--support" target="__blank">
+						<a href="https://www.sekisuiheim-owner.jp/reform/reformcase/" class="c-link-bottom__list--btn c-link-bottom__list--support" target="__blank">
 							<span class="__ttl">セキスイハイム戸建て住宅<br>オーナー様のリフォーム実例</span>
 							<span class="__logo"><img src="<?php echo get_template_directory_uri(); ?>/common/img/common/pic_owner-support.png" alt="オーナーサポート" class="__img"></span>
 						</a>
-						<a href="https://www.sekisuiheim-owner.jp/" class="c-link-bottom__list--btn c-link-bottom__list--buysell" target="__blank">
+						<a href="https://www.k-816.jp/" class="c-link-bottom__list--btn c-link-bottom__list--buysell" target="__blank">
 							<span class="__ttl">中古マンション購入<br>ご自宅売却のご相談</span>
 							<span class="__logo"><img src="<?php echo get_template_directory_uri(); ?>/common/img/common/pic_fudosan.svg" alt="九州セキスイハイム不動産" class="__img"></span>
 						</a>

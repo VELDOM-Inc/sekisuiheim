@@ -480,6 +480,8 @@
 			border: 1px solid g.$mainColor02;
 			border-radius: 100px;
 			transition: all 0.3s;
+			cursor: pointer;
+
 		}
 
 		&::after {
@@ -493,10 +495,19 @@
 			top: 0;
 			bottom: 0;
 			right: 20px;
+			transition: all 0.3s;
 		}
 
 		.wpcf7-spinner {
 			display: none;
+		}
+
+		&:hover {
+
+			&::after {
+				opacity: 0.5;
+			}
+
 		}
 
 	}
@@ -510,6 +521,10 @@
 			cursor: pointer;
 		}
 
+	}
+
+	.wpcf7-response-output {
+		opacity: 0 !important;
 	}
 	
 }

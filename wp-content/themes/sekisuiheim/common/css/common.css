@@ -1497,6 +1497,7 @@ input[type=submit] {
   border: 1px solid #42250F;
   border-radius: 100px;
   transition: all 0.3s;
+  cursor: pointer;
 }
 .c-contact-form .c-contact-form__btn::after {
   content: "";
@@ -1509,9 +1510,13 @@ input[type=submit] {
   top: 0;
   bottom: 0;
   right: 20px;
+  transition: all 0.3s;
 }
 .c-contact-form .c-contact-form__btn .wpcf7-spinner {
   display: none;
+}
+.c-contact-form .c-contact-form__btn:hover::after {
+  opacity: 0.5;
 }
 .c-contact-form .c-contact-form__return {
   text-align: center;
@@ -1520,6 +1525,9 @@ input[type=submit] {
   background: transparent;
   border-bottom: 1px solid #aaa;
   cursor: pointer;
+}
+.c-contact-form .wpcf7-response-output {
+  opacity: 0 !important;
 }
 
 .c-contact {
