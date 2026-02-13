@@ -170,6 +170,18 @@
 					padding: 13px 30px;
 				}
 
+				.__ttl {
+
+					@include g.smMax {
+						margin: 0 10px 0 0;
+					}
+
+					@include g.xsMax {
+						margin: 0 0 10px 0;
+					}
+
+				}
+
 			}
 
 			.l-header-sp__submenu {

@@ -28,14 +28,14 @@
 
 	&__ttl {
 		@include g.font-mincho;
-		font-size: 4.8rem;
+		font-size: 4.2rem;
 		line-height: 1.5;
 		text-align: center;
 		color: g.$subColor01;
 		margin-bottom: 190px;
 
 		@media screen and (max-width:1420px) {
-			font-size: 4rem;
+			font-size: 3.8rem;
 		}
 
 		@include g.lgMax {

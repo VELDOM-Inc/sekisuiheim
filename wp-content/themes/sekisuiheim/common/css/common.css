@@ -1761,7 +1761,7 @@ input[type=submit] {
 .c-link-bottom__ttl {
   font-family: "Zen Old Mincho", serif;
   font-weight: 700;
-  font-size: 4.8rem;
+  font-size: 4.2rem;
   line-height: 1.5;
   text-align: center;
   color: #2A0A03;
@@ -1769,7 +1769,7 @@ input[type=submit] {
 }
 @media screen and (max-width: 1420px) {
   .c-link-bottom__ttl {
-    font-size: 4rem;
+    font-size: 3.8rem;
   }
 }
 @media screen and (max-width:1280px) {
@@ -5447,6 +5447,16 @@ input[type=submit] {
 @media screen and (max-width:415px) {
   .l-header-sp__menu .freecall_btn {
     padding: 13px 30px;
+  }
+}
+@media screen and (max-width:768px) {
+  .l-header-sp__menu .freecall_btn .__ttl {
+    margin: 0 10px 0 0;
+  }
+}
+@media screen and (max-width:415px) {
+  .l-header-sp__menu .freecall_btn .__ttl {
+    margin: 0 0 10px 0;
   }
 }
 .l-header-sp__menu .l-header-sp__submenu {
