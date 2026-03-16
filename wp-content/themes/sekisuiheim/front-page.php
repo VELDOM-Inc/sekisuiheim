@@ -92,7 +92,19 @@
 		<h2 class="c_ttl is-fade">まるで注文住宅のよう<br>思いのままの間取りで<br class="u-sm-max">理想の空間を実現</h2>
 		<div class="c-index-works__movie is-fade">
 			<div class="__ttl">実例紹介動画</div>
-			<div class="__movie"><iframe width="560" height="315" src="https://www.youtube.com/embed/rAZvLFrh2yQ?si=olF_3Sf2IAObJVmr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+			<div class="__movie">
+				<!--<iframe width="560" height="315" src="https://www.youtube.com/embed/rAZvLFrh2yQ?si=olF_3Sf2IAObJVmr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>-->
+				<div id='player_OSe6lZlses'></div>
+				<script src="https://cdn.millvi.com/player/player.js" charset="UTF-8"></script>
+				<script>
+				const player_OSe6lZlses = new Millvi.MillviPlayer({
+					containerId: 'player_OSe6lZlses',
+				});
+				player_OSe6lZlses.setContent({
+					embedKey:'AQICAHgkhJIMl9+3neoDC0/v1kTja6umkOZef2ejS8SQc3komgFBmLMrzxARK7kze8cfnC0AAAABFDCCARAGCSqGSIb3DQEHBqCCAQEwgf4CAQAwgfgGCSqGSIb3DQEHATAeBglghkgBZQMEAS4wEQQMqB7DGkkfdabfhhTeAgEQgIHKFpH5/g2dCFLE3lsgyUIZDlJNxaCFjq/vSyEuVKy4U/eTmmpEwDSWGlHxk2gy7Xrvx/5Fg88M3byFw/YOS6YFa/WsePjde9TPJft/Og9mhjdi2dg6ALytmTTch65MDk1PABFC91K7HHem5kMg+YXxCAStZ4ypdCehgQLcvHHRGEhob7s9SOi7ZeQtk72KO94DUITQsBG5yz+2t34SNtMUovi/zepVb1WQFsHUL1oYK6uApbo86PKv1nqurvY0lVgXd/W43s0sl/YNdw==',
+				});
+				</script>
+			</div>
 		</div>
 		<div class="c-index-works__contents">
 			<div class="c-index-works__contents--flex">
